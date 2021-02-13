@@ -6,7 +6,9 @@ import H2 from './H2';
 import Container from './Container';
 import Button from './Button';
 import ButtonLink from './ButtonLink';
-import GamingHub from '../assets/GamingHub.png';
+import GamingHub from '../assets/GamingHub.jpg';
+import QuizMeApp from '../assets/QuizMeApp.jpg';
+import Weather from '../assets/Weather.jpg';
 
 const StyledProjects = styled.section`
 	padding: 7em 0 3em;
@@ -123,15 +125,19 @@ const Projects = () => {
 							PostgreSQL, Sequelize, Firebase y Passport.
 						</p>
 						<div className='project__buttons'>
-							<ButtonLink href='#'>Visitar sitio</ButtonLink>
-							<Button>Repositorio</Button>
+							<ButtonLink link='https://ecommerce-ft07-g07.vercel.app'>
+								Visitar sitio
+							</ButtonLink>
+							<ButtonLink link='https://github.com/Aglowkeys/GamingHub'>
+								Repositorio
+							</ButtonLink>
 						</div>
 					</div>
 
 					<div className='project'>
 						<Fade>
 							<div className='project__img-container'>
-								<img src={GamingHub} alt='GamingHub Image' />
+								<img src={QuizMeApp} alt='GamingHub Image' />
 							</div>
 						</Fade>
 						<h3 className='project__title'>QuizMeApp</h3>
@@ -143,7 +149,9 @@ const Projects = () => {
 						</p>
 						<div className='project__buttons'>
 							<Button disabled={true}>APK (pronto)</Button>
-							<Button>Repositorio</Button>
+							<Button disabled={true}>
+								Repositorio (pronto)
+							</Button>
 						</div>
 					</div>
 
@@ -156,12 +164,16 @@ const Projects = () => {
 						<h3 className='project__title'>Weather App</h3>
 						<p className='small project__desc'>
 							Aplicación web para buscar los datos climáticos de
-							cualquier parte del mundo. Creada con TypeScript y
-							Next.js.
+							cualquier parte del mundo. Creada con React. Datos
+							traídos de una API.
 						</p>
 						<div className='project__buttons'>
-							<Button disabled={true}>Visitar (pronto)</Button>
-							<Button>Repositorio</Button>
+							<ButtonLink link='https://ecommerce-ft07-g07.vercel.app'>
+								Visitar
+							</ButtonLink>
+							<ButtonLink link='https://github.com/Aglowkeys/Weather'>
+								Repositorio
+							</ButtonLink>
 						</div>
 					</div>
 				</div>

@@ -50,9 +50,19 @@ const StyledLink = styled.a`
 	}
 `;
 
-const ButtonLink = ({ children, alternative = '', disabled = false }) => {
+const ButtonLink = ({
+	children,
+	alternative = '',
+	disabled = false,
+	link = '#',
+}) => {
 	return (
-		<StyledLink className={alternative} disabled={disabled}>
+		<StyledLink
+			className={alternative}
+			href={link}
+			target='_blank'
+			rel='noopener noreferrer'
+		>
 			{children}
 		</StyledLink>
 	);
