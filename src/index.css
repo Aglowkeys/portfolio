@@ -1,13 +1,120 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+	--primary-100: #ec5cbb;
+	--primary-200: #c92591;
+	--primary-300: #661a45;
+	--secondary: #e0723f;
+	--light: #f7fff2;
+	--dark: #262924;
+}
+
+::selection {
+	background-color: var(--primary-200);
+	color: var(--light);
+	text-shadow: none;
+}
+
+html,
+body {
+	font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+	font-weight: 400;
+	font-size: 100%;
+	background-color: var(--dark);
+	color: var(--light);
+
+	--body-xs: 0.9rem;
+	--body-sm: 1.1rem;
+	--body-md: 1.3rem; /* Tamaño base del texto */
+	--body-lg: 1.6rem;
+
+	--h-sm: 2.5rem;
+	--h-md: 4rem;
+	--h-lg: 8rem;
+}
+
+@media (max-width: 550px) {
+	body {
+		--h-sm: 1.7rem;
+		--h-md: 2rem;
+	}
+}
+
+p,
+button,
+input,
+textarea {
+	font: inherit;
+	font-size: var(--body-md);
+}
+
+form {
+	width: 90%;
+	max-width: 50rem;
+}
+
+input,
+textarea {
+	font-size: 1.1rem;
+	background: var(--light);
+	border: 4px solid var(--primary-100);
+	padding: 0.5em 1em;
+	font-weight: 600;
+	outline: 0;
+	filter: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	transition: background-color 1s ease-in-out;
+	transition-delay: 5000s;
+}
+
+input:focus,
+textarea:focus {
+	border: 4px solid var(--primary-300);
+}
+
+label {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	border: 0;
+}
+
+p {
+	line-height: 1.5;
+	font-weight: 600;
+}
+
+p.small {
+	font-size: var(--body-sm);
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Josefin Sans', 'Inter', 'Open Sans', Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: var(--h-sm);
+}
+
+hr {
+	width: 50%;
+	margin: 0 auto;
+	border: none;
+	border-top: 1px solid #444;
 }
