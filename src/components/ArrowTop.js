@@ -51,9 +51,9 @@ const ArrowTop = () => {
 	};
 
 	const scrollTop = () => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-		const main = document.querySelector('main');
-		main.focus();
+		window.scrollTo({ top: 0, right: 0, behavior: 'smooth' });
+		const nav = document.querySelector('nav');
+		nav.focus();
 	};
 
 	window.addEventListener('scroll', checkScrollTop);

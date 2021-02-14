@@ -14,8 +14,8 @@
 }
 
 ::selection {
-	background-color: var(--primary-200);
-	color: var(--light);
+	background-color: var(--light);
+	color: var(--primary-200);
 	text-shadow: none;
 }
 

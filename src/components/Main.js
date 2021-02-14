@@ -6,7 +6,7 @@ import Contact from './Contact';
 
 const Main = () => {
 	return (
-		<main tabIndex='-1'>
+		<main>
 			<Header />
 			<AboutMe />
 			<Skills />

@@ -9,6 +9,7 @@ const StyledNavbar = styled.nav`
 	background: var(--dark);
 	border-bottom: 1px solid #333;
 	z-index: 30;
+	outline: 0;
 
 	@media (max-width: 550px) {
 		padding: 1em 0;
@@ -69,7 +70,7 @@ const StyledNavbar = styled.nav`
 
 const Navbar = () => {
 	return (
-		<StyledNavbar>
+		<StyledNavbar tabIndex='-1'>
 			<Container>
 				<ul>
 					<li>
