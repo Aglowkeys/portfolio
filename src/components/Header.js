@@ -68,9 +68,7 @@ const Header = () => {
 						Soy un diseñador web que hace foco en el detalle, los
 						diseños simples, accesibles y adaptables.
 					</p>
-					<ButtonLink link='../assets/CV.pdf'>
-						Descargar CV
-					</ButtonLink>
+					<ButtonLink link='CV.pdf'>Descargar CV</ButtonLink>
 				</div>
 				<Me className='hero__photo' />
 			</Hero>

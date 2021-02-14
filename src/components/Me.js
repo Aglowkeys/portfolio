@@ -12,7 +12,8 @@ const MyPhoto = styled.img`
 	z-index: 5;
 
 	@media (max-width: 1000px) {
-		width: 60%;
+		bottom: -7em;
+		max-width: 55%;
 	}
 
 	@media (max-width: 600px) {

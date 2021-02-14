@@ -10,6 +10,10 @@ const StyledNavbar = styled.nav`
 	border-bottom: 1px solid #333;
 	z-index: 30;
 
+	@media (max-width: 550px) {
+		padding: 1em 0;
+	}
+
 	ul {
 		display: flex;
 		justify-content: center;
@@ -33,8 +37,6 @@ const StyledNavbar = styled.nav`
 		a {
 			color: inherit;
 			text-decoration: none;
-			padding-bottom: 0.2em;
-			border-bottom: 4px solid transparent;
 			position: relative;
 
 			&:hover,
@@ -56,6 +58,10 @@ const StyledNavbar = styled.nav`
 				bottom: -0.5em;
 				left: 0;
 				right: 0;
+
+				@media (max-width: 550px) {
+					height: 3px;
+				}
 			}
 		}
 	}

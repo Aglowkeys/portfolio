@@ -37,10 +37,11 @@ const StyledProjects = styled.section`
 		width: auto;
 		padding-right: 4em;
 		margin-bottom: 4em;
+	}
 
-		@media (max-width: 1060px) {
-			position: static;
-		}
+	.projects__list {
+		z-index: 10;
+		background-color: var(--dark);
 	}
 
 	.project {

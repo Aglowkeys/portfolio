@@ -25,7 +25,7 @@ const StyledButton = styled.button`
 	}
 
 	&:focus {
-		outline: 4px dotted var(--primary-300);
+		outline: 4px dotted var(--light);
 		outline-offset: 0.5em;
 	}
 

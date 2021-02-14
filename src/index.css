@@ -27,7 +27,7 @@ body {
 	background-color: var(--dark);
 	color: var(--light);
 
-	--body-xs: 0.9rem;
+	--body-xs: 0.8rem;
 	--body-sm: 1.1rem;
 	--body-md: 1.3rem; /* Tamaño base del texto */
 	--body-lg: 1.6rem;
@@ -39,6 +39,8 @@ body {
 
 @media (max-width: 550px) {
 	body {
+		--body-sm: 1rem;
+		--body-md: 1.1rem;
 		--h-sm: 1.7rem;
 		--h-md: 2rem;
 	}

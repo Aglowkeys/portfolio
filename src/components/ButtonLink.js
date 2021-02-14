@@ -29,7 +29,7 @@ const StyledLink = styled.a`
 	}
 
 	&:focus {
-		outline: 4px dotted var(--primary-300);
+		outline: 4px dotted var(--primary-100);
 		outline-offset: 0.5em;
 	}
 

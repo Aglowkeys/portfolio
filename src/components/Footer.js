@@ -6,6 +6,14 @@ const StyledFooter = styled.footer`
 	padding: 3em 0;
 	position: relative;
 
+	a {
+		color: currentColor;
+	}
+
+	a:hover {
+		color: var(--primary-100);
+	}
+
 	& > * {
 		display: flex;
 		justify-content: space-between;
@@ -40,6 +48,45 @@ const StyledFooter = styled.footer`
 		li:last-child {
 			margin-left: 2em;
 		}
+
+		a:focus {
+			outline: 4px dotted var(--primary-100);
+			outline-offset: 0.5em;
+		}
+	}
+
+	.footer__mail a {
+		text-decoration: none;
+		position: relative;
+
+		&:hover,
+		&:focus {
+			outline: none;
+			color: var(--primary-100);
+		}
+
+		@media (max-width: 550px) {
+			font-size: var(--body-sm);
+		}
+
+		&:hover::before,
+		&:focus::before {
+			content: '';
+			height: 5px;
+			background-image: linear-gradient(
+				45deg,
+				var(--primary-100),
+				var(--secondary)
+			);
+			position: absolute;
+			bottom: -0.5em;
+			left: 0;
+			right: 0;
+
+			@media (max-width: 550px) {
+				height: 3px;
+			}
+		}
 	}
 `;
 
@@ -50,14 +97,30 @@ const Footer = () => {
 				<div className='footer__icons'>
 					<ul>
 						<li>
-							<Github size={35} />
+							<a
+								href='https://github.com/Aglowkeys/'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								<Github size={35} />
+							</a>
 						</li>
 						<li>
-							<Linkedin size={35} />
+							<a
+								href='https://www.linkedin.com/in/emiliano-alfonso/'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								<Linkedin size={35} />
+							</a>
 						</li>
 					</ul>
 				</div>
-				<p>emilianoalfonso1989@gmail.com</p>
+				<p className='footer__mail'>
+					<a href='mailto:emilianoalfonso1989@gmail.com'>
+						emilianoalfonso1989@gmail.com
+					</a>
+				</p>
 			</Container>
 		</StyledFooter>
 	);
