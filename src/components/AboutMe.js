@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 
-import Button from './Button';
+import ButtonLink from './ButtonLink';
 import Container from './Container';
 import H2 from './H2';
 
@@ -33,9 +33,14 @@ const StyledAbout = styled.section`
 		margin: 0 auto;
 	}
 
-	button {
+	a {
 		display: inline-block;
 		margin: 2em auto 0;
+
+		&:focus {
+			outline: 4px dotted var(--light);
+			outline-offset: 0.5em;
+		}
 	}
 `;
 
@@ -58,7 +63,13 @@ const AboutMe = () => {
 					</p>
 				</Fade>
 				<Fade>
-					<Button alternative='alternative'>Ver mis proyectos</Button>
+					<ButtonLink
+						link='#portfolio'
+						alternative='alternative'
+						blank={false}
+					>
+						Ver mis proyectos
+					</ButtonLink>
 				</Fade>
 			</Container>
 		</StyledAbout>

@@ -56,12 +56,13 @@ const ButtonLink = ({
 	alternative = '',
 	disabled = false,
 	link = '#',
+	blank = true,
 }) => {
 	return (
 		<StyledLink
 			className={alternative}
 			href={link}
-			target='_blank'
+			target={blank && '_blank'}
 			rel='noopener noreferrer'
 		>
 			{children}
