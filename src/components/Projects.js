@@ -168,7 +168,7 @@ const Projects = () => {
 							traídos de una API.
 						</p>
 						<div className='project__buttons'>
-							<ButtonLink link='https://ecommerce-ft07-g07.vercel.app'>
+							<ButtonLink link='https://weather-eosin.vercel.app'>
 								Visitar
 							</ButtonLink>
 							<ButtonLink link='https://github.com/Aglowkeys/Weather'>
