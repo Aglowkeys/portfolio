@@ -23,7 +23,11 @@ const StyledNavbar = styled.nav`
 		}
 
 		& > li + li {
-			margin-left: 3rem;
+			margin-left: 3em;
+
+			@media (max-width: 550px) {
+				margin-left: 2em;
+			}
 		}
 
 		a {
