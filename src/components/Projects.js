@@ -158,7 +158,7 @@ const Projects = () => {
 					<div className='project'>
 						<Fade>
 							<div className='project__img-container'>
-								<img src={GamingHub} alt='GamingHub Image' />
+								<img src={Weather} alt='GamingHub Image' />
 							</div>
 						</Fade>
 						<h3 className='project__title'>Weather App</h3>

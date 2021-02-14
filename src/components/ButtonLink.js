@@ -12,6 +12,7 @@ const StyledLink = styled.a`
 	font-weight: 800;
 	min-width: 8em;
 	padding: 0.75em 1.4em;
+	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
