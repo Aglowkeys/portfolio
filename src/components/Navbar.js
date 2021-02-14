@@ -73,13 +73,13 @@ const Navbar = () => {
 			<Container>
 				<ul>
 					<li>
-						<a href='http://google.com/'>Habilidades</a>
+						<a href='#skills'>Habilidades</a>
 					</li>
 					<li>
-						<a href='http://google.com/'>Portfolio</a>
+						<a href='#portfolio'>Portfolio</a>
 					</li>
 					<li>
-						<a href='http://google.com/'>Contacto</a>
+						<a href='#contact'>Contacto</a>
 					</li>
 				</ul>
 			</Container>

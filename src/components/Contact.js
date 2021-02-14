@@ -71,7 +71,7 @@ const Contact = () => {
 		console.log(data);
 	};
 	return (
-		<StyledContact>
+		<StyledContact id='contact'>
 			<Container>
 				<H2>Hablemos</H2>
 				<p>

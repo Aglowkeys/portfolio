@@ -1,12 +1,13 @@
-import Navbar from './components/Navbar';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import ArrowTop from './components/ArrowTop';
 
 function App() {
 	return (
 		<>
 			<Main />
 			<Footer />
+			<ArrowTop />
 		</>
 	);
 }

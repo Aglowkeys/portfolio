@@ -27,7 +27,7 @@ const StyledSkills = styled.section`
 
 const Skills = () => {
 	return (
-		<StyledSkills>
+		<StyledSkills id='skills'>
 			<Container>
 				<H2>Habilidades</H2>
 				<p>Estas son las tecnologías con las cuales me manejo:</p>

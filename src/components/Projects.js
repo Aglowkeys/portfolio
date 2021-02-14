@@ -20,12 +20,13 @@ const StyledProjects = styled.section`
 	& > * {
 		display: flex;
 		justify-content: center;
-		flex-wrap: wrap;
+
+		@media (max-width: 800px) {
+			flex-direction: column;
+		}
 
 		& > div {
-			flex-basis: 50%;
-			flex-shrink: 1;
-			flex-grow: 1;
+			flex: 1 1 50%;
 		}
 	}
 
@@ -37,6 +38,10 @@ const StyledProjects = styled.section`
 		width: auto;
 		padding-right: 4em;
 		margin-bottom: 4em;
+
+		@media (max-width: 800px) {
+			position: static;
+		}
 	}
 
 	.projects__list {
@@ -103,10 +108,10 @@ const StyledProjects = styled.section`
 
 const Projects = () => {
 	return (
-		<StyledProjects>
+		<StyledProjects id='portfolio'>
 			<Container>
 				<div className='projects__header'>
-					<H2 alternative='alternative'>Proyectos</H2>
+					<H2 alternative='alternative'>Portfolio</H2>
 					<p>
 						A continuación te muestro algunos de los proyectos en
 						los cuales trabajé:
@@ -138,7 +143,7 @@ const Projects = () => {
 					<div className='project'>
 						<Fade>
 							<div className='project__img-container'>
-								<img src={QuizMeApp} alt='GamingHub Image' />
+								<img src={QuizMeApp} alt='QuizMe App Image' />
 							</div>
 						</Fade>
 						<h3 className='project__title'>QuizMeApp</h3>
@@ -159,7 +164,7 @@ const Projects = () => {
 					<div className='project'>
 						<Fade>
 							<div className='project__img-container'>
-								<img src={Weather} alt='GamingHub Image' />
+								<img src={Weather} alt='Weather App Image' />
 							</div>
 						</Fade>
 						<h3 className='project__title'>Weather App</h3>

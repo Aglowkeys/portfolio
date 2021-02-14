@@ -26,6 +26,7 @@ body {
 	font-size: 100%;
 	background-color: var(--dark);
 	color: var(--light);
+	scroll-behavior: smooth;
 
 	--body-xs: 0.8rem;
 	--body-sm: 1.1rem;
@@ -119,4 +120,11 @@ hr {
 	margin: 0 auto;
 	border: none;
 	border-top: 1px solid #444;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html,
+	body {
+		scroll-behavior: auto;
+	}
 }
