@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 
-import Button from './Button';
 import Name from './Name';
 import Me from './Me';
 import Navbar from './Navbar';
+import ButtonLink from './ButtonLink';
 
 const StyledHeader = styled.header`
 	min-height: 100vh;
@@ -68,7 +68,9 @@ const Header = () => {
 						Soy un diseñador web que hace foco en el detalle, los
 						diseños simples, accesibles y adaptables.
 					</p>
-					<Button>Descargar CV</Button>
+					<ButtonLink link='../assets/CV.pdf'>
+						Descargar CV
+					</ButtonLink>
 				</div>
 				<Me className='hero__photo' />
 			</Hero>
