@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import myphoto from '../assets/FotoMia.png';
+import myphoto from '../assets/fotomia.jpg';
 
 const MyPhoto = styled.img`
 	max-width: 100%;

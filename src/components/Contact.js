@@ -83,6 +83,7 @@ const Contact = () => {
 					<div>
 						<label htmlFor='name'>Nombre:</label>
 						<input
+							required
 							name='name'
 							ref={register}
 							id='name'
@@ -92,6 +93,7 @@ const Contact = () => {
 
 						<label htmlFor='email'>E-mail:</label>
 						<input
+							required
 							name='email'
 							ref={register}
 							id='email'
@@ -102,6 +104,7 @@ const Contact = () => {
 
 					<label htmlFor='message'>Mensaje:</label>
 					<textarea
+						required
 						name='message'
 						ref={register}
 						id='message'
