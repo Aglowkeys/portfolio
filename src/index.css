@@ -19,7 +19,8 @@
 	text-shadow: none;
 }
 
-input::selection {
+input::selection,
+textarea::selection {
 	background-color: var(--primary-100);
 	color: var(--dark);
 }
