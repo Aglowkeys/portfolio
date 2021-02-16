@@ -154,10 +154,12 @@ const Projects = () => {
 							TypeScript.
 						</p>
 						<div className='project__buttons'>
-							<Button disabled={true}>APK (pronto)</Button>
-							<Button disabled={true}>
-								Repositorio (pronto)
-							</Button>
+							<ButtonLink link='https://appgallery.huawei.com/#/app/C103845919'>
+								Descargar App
+							</ButtonLink>
+							<ButtonLink link='https://github.com/Aglowkeys/QuizmeApp'>
+								Repositorio
+							</ButtonLink>
 						</div>
 					</div>
 
@@ -175,7 +177,7 @@ const Projects = () => {
 						</p>
 						<div className='project__buttons'>
 							<ButtonLink link='https://weather-eosin.vercel.app'>
-								Visitar
+								Visitar sitio
 							</ButtonLink>
 							<ButtonLink link='https://github.com/Aglowkeys/Weather'>
 								Repositorio
