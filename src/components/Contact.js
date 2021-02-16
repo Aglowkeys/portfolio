@@ -160,8 +160,6 @@ const Contact = () => {
 		REACT_APP_USER,
 	} = process.env;
 	init(REACT_APP_USER);
-	console.log(process.env);
-	console.log(REACT_APP_SERVICE, REACT_APP_TEMPLATE, REACT_APP_USER);
 
 	const formRef = useRef(null);
 	let [sent, setSent] = useState(false);
