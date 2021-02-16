@@ -19,6 +19,11 @@
 	text-shadow: none;
 }
 
+input::selection {
+	background-color: var(--primary-100);
+	color: var(--dark);
+}
+
 html,
 body {
 	font-family: 'Inter', 'Open Sans', Arial, sans-serif;

@@ -59,9 +59,13 @@ const StyledButton = styled.button`
 	}
 `;
 
-const Button = ({ children, alternative = '', disabled = false }) => {
+const Button = ({ children, type, alternative = '', disabled = false }) => {
 	return (
-		<StyledButton className={alternative} disabled={disabled}>
+		<StyledButton
+			className={alternative}
+			disabled={disabled}
+			type={type || 'undefined'}
+		>
 			{children}
 		</StyledButton>
 	);

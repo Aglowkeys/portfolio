@@ -21,7 +21,7 @@ const StyledNavbar = styled.nav`
 		list-style: none;
 		text-transform: uppercase;
 		font-weight: 800;
-		font-size: var(--body-md);
+		font-size: var(--body-sm);
 
 		@media (max-width: 550px) {
 			font-size: var(--body-xs);
