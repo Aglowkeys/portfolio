@@ -185,17 +185,17 @@ const Contact = () => {
 								3,
 								'El nombre debe tener al menos 3 caracteres de largo.'
 							)
-							.required('Tu nombre es requerido.')
+							.required('Ingresa tu nombre.')
 							.matches(
 								/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/i,
 								'El nombre ingresado no es válido.'
 							),
-						message: Yup.string().required(
-							'Tu mensaje es requerido.'
-						),
+						message: Yup.string().required('Ingresa un mensaje.'),
 						email: Yup.string()
-							.email('El e-mail ingresado es inválido.')
-							.required('Tu correo electrónico es requerido.'),
+							.email(
+								'El correo electrónico ingresado es inválido.'
+							)
+							.required('Ingresa un correo electrónico.'),
 					})}
 					onSubmit={(values, { setSubmitting }) => {
 						emailjs
@@ -230,7 +230,7 @@ const Contact = () => {
 									label='E-mail'
 									name='email'
 									type='email'
-									placeholder='E-mail'
+									placeholder='Correo electrónico'
 								/>
 							</div>
 							<MyTextarea
