@@ -122,8 +122,16 @@ const MyTextInput = ({ label, ...props }) => {
 	const [field, meta] = useField(props);
 	return (
 		<div className='input__container'>
-			<label htmlFor={props.id || props.name}>{label}</label>
-			<input {...field} {...props} />
+			<label
+				htmlFor={props.id || props.name}
+			>{`${label} (requerido):`}</label>
+			<input
+				{...field}
+				{...props}
+				aria-required='true'
+				aria-invalid={meta.error ? 'true' : 'false'}
+				aria-describedby={meta.error ? meta.error : null}
+			/>
 			{meta.touched && meta.error ? (
 				<div className='input__error'>
 					<div className='error__svg-container'>
@@ -139,8 +147,16 @@ const MyTextarea = ({ label, ...props }) => {
 	const [field, meta] = useField(props);
 	return (
 		<div className='textarea__container'>
-			<label htmlFor={props.id || props.name}>{label}</label>
-			<textarea {...field} {...props} />
+			<label
+				htmlFor={props.id || props.name}
+			>{`${label} (requerido):`}</label>
+			<textarea
+				{...field}
+				{...props}
+				aria-required='true'
+				aria-invalid={meta.error ? 'true' : 'false'}
+				aria-describedby={meta.error ? meta.error : null}
+			/>
 			{meta.touched && meta.error ? (
 				<div className='input__error'>
 					<div className='error__svg-container'>
@@ -235,7 +251,7 @@ const Contact = () => {
 							</div>
 							<MyTextarea
 								id='message'
-								label='message'
+								label='Mensaje'
 								name='message'
 								placeholder='Mensaje'
 							/>
