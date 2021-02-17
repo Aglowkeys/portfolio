@@ -57,6 +57,7 @@ const ButtonLink = ({
 	disabled = false,
 	link = '#',
 	blank = true,
+	ariaLabel = null,
 }) => {
 	return (
 		<StyledLink
@@ -64,6 +65,7 @@ const ButtonLink = ({
 			href={link}
 			target={blank ? '_blank' : '_self'}
 			rel='noopener noreferrer'
+			aria-label={ariaLabel}
 		>
 			{children}
 		</StyledLink>

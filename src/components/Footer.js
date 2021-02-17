@@ -101,6 +101,7 @@ const Footer = () => {
 								href='https://github.com/Aglowkeys/'
 								target='_blank'
 								rel='noopener noreferrer'
+								aria-label='Ver mi perfil en Github'
 							>
 								<Github size={35} />
 							</a>
@@ -110,6 +111,7 @@ const Footer = () => {
 								href='https://www.linkedin.com/in/emiliano-alfonso/'
 								target='_blank'
 								rel='noopener noreferrer'
+								aria-label='Ver mi perfil en LinkedIn'
 							>
 								<Linkedin size={35} />
 							</a>

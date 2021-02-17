@@ -63,6 +63,7 @@ const ArrowTop = () => {
 			onClick={scrollTop}
 			tabIndex='0'
 			style={{ display: showScroll ? 'flex' : 'none' }}
+			aria-label='Volver arriba'
 		>
 			<svg
 				fill='currentColor'

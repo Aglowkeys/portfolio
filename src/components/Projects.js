@@ -131,10 +131,16 @@ const Projects = () => {
 							PostgreSQL, Sequelize, Firebase y Passport.
 						</p>
 						<div className='project__buttons'>
-							<ButtonLink link='https://ecommerce-ft07-g07.vercel.app'>
+							<ButtonLink
+								link='https://ecommerce-ft07-g07.vercel.app'
+								ariaLabel='Visitar el sitio de GamingHub'
+							>
 								Visitar sitio
 							</ButtonLink>
-							<ButtonLink link='https://github.com/Aglowkeys/GamingHub'>
+							<ButtonLink
+								link='https://github.com/Aglowkeys/GamingHub'
+								ariaLabel='Ver el repositorio de GamingHub'
+							>
 								Repositorio
 							</ButtonLink>
 						</div>
@@ -154,10 +160,16 @@ const Projects = () => {
 							TypeScript.
 						</p>
 						<div className='project__buttons'>
-							<ButtonLink link='https://appgallery.huawei.com/#/app/C103845919'>
+							<ButtonLink
+								link='https://appgallery.huawei.com/#/app/C103845919'
+								ariaLabel='Descargar la app QuizMeApp'
+							>
 								Descargar App
 							</ButtonLink>
-							<ButtonLink link='https://github.com/Aglowkeys/QuizmeApp'>
+							<ButtonLink
+								link='https://github.com/Aglowkeys/QuizmeApp'
+								ariaLabel='Ver el repositorio de QuizMeApp'
+							>
 								Repositorio
 							</ButtonLink>
 						</div>
@@ -176,10 +188,16 @@ const Projects = () => {
 							traídos de una API.
 						</p>
 						<div className='project__buttons'>
-							<ButtonLink link='https://weather-eosin.vercel.app'>
+							<ButtonLink
+								link='https://weather-eosin.vercel.app'
+								ariaLabel='Visitar el sitio de Weather App'
+							>
 								Visitar sitio
 							</ButtonLink>
-							<ButtonLink link='https://github.com/Aglowkeys/Weather'>
+							<ButtonLink
+								link='https://github.com/Aglowkeys/Weather'
+								ariaLabel='Ver el repositorio de Weather App'
+							>
 								Repositorio
 							</ButtonLink>
 						</div>

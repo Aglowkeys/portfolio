@@ -65,6 +65,41 @@ const StyledNavbar = styled.nav`
 				}
 			}
 		}
+		button {
+			cursor: pointer;
+			font-size: inherit;
+			padding: 0;
+			background: transparent;
+			border: none;
+			color: inherit;
+			text-decoration: none;
+			position: relative;
+
+			&:hover,
+			&:focus {
+				outline: none;
+				color: var(--primary-100);
+			}
+
+			&:hover::before,
+			&:focus::before {
+				content: '';
+				height: 5px;
+				background-image: linear-gradient(
+					45deg,
+					var(--primary-100),
+					var(--secondary)
+				);
+				position: absolute;
+				bottom: -0.5em;
+				left: 0;
+				right: 0;
+
+				@media (max-width: 550px) {
+					height: 3px;
+				}
+			}
+		}
 	}
 `;
 
@@ -82,6 +117,9 @@ const Navbar = () => {
 					<li>
 						<a href='#contact'>Contacto</a>
 					</li>
+					{/* 					<li>
+						<button>ES</button>
+					</li> */}
 				</ul>
 			</Container>
 		</StyledNavbar>
