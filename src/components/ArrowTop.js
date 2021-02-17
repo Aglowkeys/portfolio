@@ -29,6 +29,10 @@ const ArrowStyled = styled.button`
 		outline-offset: 0.5em;
 	}
 
+	svg {
+		fill: currentColor;
+	}
+
 	@keyframes fadeIn {
 		0% {
 			opacity: 0;
