@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const StyledName = styled.h1`
 	font-size: var(--h-lg);
+	font-size: clamp(2.5rem, 10vw, var(--h-lg));
 	color: var(--primary-200);
 	line-height: 1;
 	letter-spacing: -0.075em;
@@ -19,10 +20,6 @@ const StyledName = styled.h1`
 	}
 	span {
 		display: block;
-	}
-
-	@media (max-width: 1000px) {
-		font-size: var(--h-md);
 	}
 `;
 
