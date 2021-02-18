@@ -34,7 +34,7 @@ body {
 	color: var(--light);
 	scroll-behavior: smooth;
 
-	--body-xs: 0.8rem;
+	--body-xs: 0.75rem;
 	--body-sm: 1.1rem;
 	--body-md: 1.3rem; /* Tamaño base del texto */
 	--body-lg: 1.6rem;
