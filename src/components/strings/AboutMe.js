@@ -2,7 +2,7 @@ export default {
 	en: {
 		aboutMe: 'About Me',
 		description:
-			'Freelance developer, music teacher, Front-end lover. I attended a bootcamp with more than 700 hours of intensive learning that prepared me to work as a Full-stack developer, creating projects that were both real and complex. Furthermore, the bootcamp greatly improved my interpersonal skills and allowed me to mentor beginner students.',
+			'Freelance developer, music teacher, Front-end lover. I attended a bootcamp with more than 700 hours of intensive learning that prepared me to work as a Full-stack developer, creating projects that were both real and complex. Furthermore, the bootcamp greatly improved my interpersonal skills and gave me the opportunity of teaching to beginner students.',
 		seeProjects: 'See my projects',
 	},
 	es: {

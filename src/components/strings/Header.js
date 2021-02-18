@@ -1,7 +1,7 @@
 export default {
 	en: {
 		description:
-			'I am a web designer who puts the focus on the small details, and the simple, accessible and adaptable designs.',
+			'I am a web designer who focuses on the small details, and on simple, accessible and adaptable designs.',
 		downloadCV: 'Download Resume',
 		cvLink: 'Emiliano_Alfonso_en.pdf',
 	},
