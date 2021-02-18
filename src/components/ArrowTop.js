@@ -35,6 +35,8 @@ const ArrowStyled = styled.button`
 
 	svg {
 		fill: currentColor;
+		width: 100%;
+		height: 100%;
 	}
 
 	@keyframes fadeIn {
