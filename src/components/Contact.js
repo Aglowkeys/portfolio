@@ -43,7 +43,7 @@ const StyledContact = styled.section`
 		align-items: center;
 	}
 
-	form > div:not(.send__message) {
+	form > div:first-child {
 		width: 100%;
 		display: flex;
 		flex-wrap: no-wrap;
@@ -57,6 +57,10 @@ const StyledContact = styled.section`
 	.input__container,
 	.textarea__container {
 		flex: 1;
+	}
+
+	.textarea__container {
+		width: 100%;
 	}
 
 	.input__container:last-of-type {
@@ -121,6 +125,10 @@ const StyledContact = styled.section`
 		width: 1em;
 		height: 1em;
 	}
+
+	.g-recaptcha {
+		margin-bottom: 1em;
+	}
 `;
 
 const MyTextInput = ({ label, ...props }) => {
@@ -177,6 +185,7 @@ const Contact = () => {
 		REACT_APP_SERVICE,
 		REACT_APP_TEMPLATE,
 		REACT_APP_USER,
+		REACT_APP_CAPTCHA_SITE_KEY,
 	} = process.env;
 	init(REACT_APP_USER);
 
@@ -211,7 +220,7 @@ const Contact = () => {
 							.email(s.errorEmailInvalid)
 							.required(s.errorEmailIncomplete),
 					})}
-					onSubmit={(values, { setSubmitting }) => {
+					onSubmit={(values, { setSubmitting, resetForm }) => {
 						emailjs
 							.sendForm(
 								REACT_APP_SERVICE,
@@ -221,6 +230,13 @@ const Contact = () => {
 							.then(() => {
 								setSendError(false);
 								setSent(true);
+								resetForm({
+									values: {
+										name: '',
+										email: '',
+										message: '',
+									},
+								});
 							})
 							.catch(() => {
 								setSent(false);
@@ -253,6 +269,11 @@ const Contact = () => {
 								name='message'
 								placeholder={s.placeholderMessage}
 							/>
+							<div
+								className='g-recaptcha'
+								data-sitekey={REACT_APP_CAPTCHA_SITE_KEY}
+							></div>
+
 							<Button
 								alternative='alternative'
 								type='submit'
