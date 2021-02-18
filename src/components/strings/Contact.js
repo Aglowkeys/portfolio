@@ -15,12 +15,12 @@ export default {
 			'Message sent! I will get in touch with you as soon as possible.',
 		sendError:
 			'There was an error trying to send your message. Please try again.',
-		errorNameIncomplete: 'Enter your name.',
+		errorNameIncomplete: 'Please enter your name.',
 		errorNameShort: 'Your name must be at least 3 characters long.',
-		errorNameInvalid: 'The name you entered is invalid.',
-		errorMessage: 'The message field is blank.',
-		errorEmailIncomplete: 'Enter an e-mail address.',
-		errorEmailInvalid: 'The e-mail you entered is invalid.',
+		errorNameInvalid: 'The provided name is invalid.',
+		errorMessage: 'Please enter a message.',
+		errorEmailIncomplete: 'Please enter an e-mail address.',
+		errorEmailInvalid: 'The provided e-mail is invalid.',
 	},
 	es: {
 		title: 'Hablemos',
@@ -38,11 +38,12 @@ export default {
 			'¡Tu mensaje fue enviado! Me contactaré contigo a la brevedad.',
 		sendError:
 			'Ocurrió un error al enviar tu mensaje. Por favor, inténtalo nuevamente.',
-		errorNameIncomplete: 'Ingresa tu nombre.',
+		errorNameIncomplete: 'Por favor, ingresa tu nombre.',
 		errorNameShort: 'Tu nombre debe tener al menos 3 caracteres de largo.',
 		errorNameInvalid: 'El nombre ingresado es inválido.',
-		errorMessage: 'No completaste el mensaje.',
-		errorEmailIncomplete: 'Ingresa una dirección de correo electrónico.',
+		errorMessage: 'Por favor, escribe un mensaje.',
+		errorEmailIncomplete:
+			'Por favor, ingresa una dirección de correo electrónico.',
 		errorEmailInvalid: 'El correo electrónico ingresado es inválido.',
 	},
 };
