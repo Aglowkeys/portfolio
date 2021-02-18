@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const StyledButton = styled.button`
 	background-color: var(--primary-200);
 	border: 0;
+	border-radius: 0;
 	box-shadow: 5px 5px 0px var(--primary-300);
 	color: var(--light);
 	font: inherit;

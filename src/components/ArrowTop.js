@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 const ArrowStyled = styled.button`
 	border: 0;
+	border-radius: 0;
 	width: 3rem;
 	height: 3rem;
 	position: fixed;
@@ -75,7 +76,7 @@ const ArrowTop = () => {
 			aria-label={s.goTop}
 			title={s.goTop}
 		>
-			<svg
+			{/* 			<svg
 				fill='currentColor'
 				viewBox='0 0 20 20'
 				xmlns='http://www.w3.org/2000/svg'
@@ -85,6 +86,14 @@ const ArrowTop = () => {
 					d='M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z'
 					clipRule='evenodd'
 				></path>
+			</svg> */}
+
+			<svg
+				fill='currentColor'
+				viewBox='0 0 20 20'
+				xmlns='http://www.w3.org/2000/svg'
+			>
+				<path d='M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z' />
 			</svg>
 		</ArrowStyled>
 	);
