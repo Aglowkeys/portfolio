@@ -19,6 +19,11 @@ const StyledName = styled.h1`
 		);
 		background-clip: text;
 		-webkit-background-clip: text;
+		-webkit-mask-image: linear-gradient(
+			90deg,
+			var(--primary-200),
+			var(--secondary)
+		); // Para arreglar bug con Safari. Parece que no le gustan las etiquetas dentro de h1
 	}
 
 	// Para evitar bugs en Safari
