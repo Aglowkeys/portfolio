@@ -82,12 +82,14 @@ const StyledContact = styled.section`
 	}
 
 	.input__error {
+		background-color: var(--error);
 		font-size: var(--body-xs);
 		font-weight: 600;
 		text-transform: uppercase;
-		padding: 0.5em;
+		padding: 0.75em;
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
+		line-height: 1.5;
 
 		.error__svg-container {
 			flex-shrink: 0;
