@@ -1,3 +1,7 @@
+import React, { useContext } from 'react';
+import { LanguageContext } from '../LangContext';
+import strings from './strings/Header';
+
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 
@@ -56,6 +60,9 @@ const Hero = styled.div`
 `;
 
 const Header = () => {
+	const { Lang } = useContext(LanguageContext);
+	const s = strings[Lang];
+
 	return (
 		<StyledHeader>
 			<Navbar />
@@ -64,11 +71,8 @@ const Header = () => {
 					<Fade>
 						<Name />
 					</Fade>
-					<p className='hero__tagline'>
-						Soy un diseñador web que hace foco en el detalle, los
-						diseños simples, accesibles y adaptables.
-					</p>
-					<ButtonLink link='CV.pdf'>Descargar CV</ButtonLink>
+					<p className='hero__tagline'>{s.description}</p>
+					<ButtonLink link={s.cvLink}>{s.downloadCV}</ButtonLink>
 				</div>
 				<Me className='hero__photo' />
 			</Hero>

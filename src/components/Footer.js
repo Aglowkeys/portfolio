@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { LanguageContext } from '../LangContext';
+import strings from './strings/Footer';
+
 import styled from 'styled-components';
 import Container from './Container';
 import { Github, Linkedin } from '@icons-pack/react-simple-icons';
@@ -91,6 +94,9 @@ const StyledFooter = styled.footer`
 `;
 
 const Footer = () => {
+	const { Lang } = useContext(LanguageContext);
+	const s = strings[Lang];
+
 	return (
 		<StyledFooter>
 			<Container>
@@ -101,7 +107,7 @@ const Footer = () => {
 								href='https://github.com/Aglowkeys/'
 								target='_blank'
 								rel='noopener noreferrer'
-								aria-label='Ver mi perfil en Github'
+								aria-label={s.github}
 							>
 								<Github size={35} />
 							</a>
@@ -111,7 +117,7 @@ const Footer = () => {
 								href='https://www.linkedin.com/in/emiliano-alfonso/'
 								target='_blank'
 								rel='noopener noreferrer'
-								aria-label='Ver mi perfil en LinkedIn'
+								aria-label={s.linkedin}
 							>
 								<Linkedin size={35} />
 							</a>

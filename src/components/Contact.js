@@ -1,4 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useContext } from 'react';
+import { LanguageContext } from '../LangContext';
+import strings from './strings/Contact';
+
 import { Formik, Form, useField, Field } from 'formik';
 import * as Yup from 'yup';
 import emailjs, { init } from 'emailjs-com';
@@ -120,11 +123,10 @@ const StyledContact = styled.section`
 
 const MyTextInput = ({ label, ...props }) => {
 	const [field, meta] = useField(props);
+
 	return (
 		<div className='input__container'>
-			<label
-				htmlFor={props.id || props.name}
-			>{`${label} (requerido):`}</label>
+			<label htmlFor={props.id || props.name}>{label}</label>
 			<input
 				{...field}
 				{...props}
@@ -145,11 +147,10 @@ const MyTextInput = ({ label, ...props }) => {
 };
 const MyTextarea = ({ label, ...props }) => {
 	const [field, meta] = useField(props);
+
 	return (
 		<div className='textarea__container'>
-			<label
-				htmlFor={props.id || props.name}
-			>{`${label} (requerido):`}</label>
+			<label htmlFor={props.id || props.name}>{label}</label>
 			<textarea
 				{...field}
 				{...props}
@@ -177,6 +178,9 @@ const Contact = () => {
 	} = process.env;
 	init(REACT_APP_USER);
 
+	const { Lang } = useContext(LanguageContext);
+	const s = strings[Lang];
+
 	const formRef = useRef(null);
 	let [sent, setSent] = useState(false);
 	let [sendError, setSendError] = useState(false);
@@ -184,11 +188,8 @@ const Contact = () => {
 	return (
 		<StyledContact id='contact'>
 			<Container>
-				<H2>Hablemos</H2>
-				<p>
-					¡No dudes en contactarme para cualquier consulta! Los
-					enlaces a mis redes están abajo.
-				</p>
+				<H2>{s.title}</H2>
+				<p>{s.description}</p>
 				<Formik
 					initialValues={{
 						name: '',
@@ -197,21 +198,16 @@ const Contact = () => {
 					}}
 					validationSchema={Yup.object({
 						name: Yup.string()
-							.min(
-								3,
-								'El nombre debe tener al menos 3 caracteres de largo.'
-							)
-							.required('Ingresa tu nombre.')
+							.min(3, s.errorNameShort)
+							.required(s.errorNameIncomplete)
 							.matches(
 								/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/i,
-								'El nombre ingresado no es válido.'
+								s.errorNameInvalid
 							),
-						message: Yup.string().required('Ingresa un mensaje.'),
+						message: Yup.string().required(s.errorMessage),
 						email: Yup.string()
-							.email(
-								'El correo electrónico ingresado es inválido.'
-							)
-							.required('Ingresa un correo electrónico.'),
+							.email(s.errorEmailInvalid)
+							.required(s.errorEmailIncomplete),
 					})}
 					onSubmit={(values, { setSubmitting }) => {
 						emailjs
@@ -236,31 +232,31 @@ const Contact = () => {
 							<div>
 								<MyTextInput
 									id='name'
-									label='Nombre'
+									label={s.labelName}
 									name='name'
 									type='text'
-									placeholder='Nombre'
+									placeholder={s.placeholderName}
 								/>
 								<MyTextInput
 									id='email'
-									label='E-mail'
+									label={s.labelEmail}
 									name='email'
 									type='email'
-									placeholder='Correo electrónico'
+									placeholder={s.placeholderEmail}
 								/>
 							</div>
 							<MyTextarea
 								id='message'
-								label='Mensaje'
+								label={s.labelMessage}
 								name='message'
-								placeholder='Mensaje'
+								placeholder={s.placeholderMessage}
 							/>
 							<Button
 								alternative='alternative'
 								type='submit'
 								disabled={formik.isSubmitting}
 							>
-								Enviar
+								{formik.isSubmitting ? s.sending : s.send}
 								{formik.isSubmitting && <Spinner />}
 							</Button>
 							<div className='send__message'>
@@ -269,8 +265,7 @@ const Contact = () => {
 										<div className='svg-container'>
 											<Success />
 										</div>
-										¡Tu mensaje fue enviado! Me contactaré a
-										la brevedad.
+										{s.sendSuccess}
 									</>
 								)}
 								{sendError && (
@@ -278,47 +273,13 @@ const Contact = () => {
 										<div className='svg-container'>
 											<Exclamation />
 										</div>
-										Ocurrió un error al enviar tu mensaje.
-										Por favor, vuelve a intentarlo.
+										{s.sendError}
 									</>
 								)}
 							</div>
 						</Form>
 					)}
 				</Formik>
-				{/* 	<form>
-					<div>
-						<label htmlFor='name'>Nombre:</label>
-						<input
-							required
-							name='name'
-							id='name'
-							type='text'
-							placeholder='Tu nombre'
-						/>
-
-						<label htmlFor='email'>E-mail:</label>
-						<input
-							required
-							name='email'
-							id='email'
-							type='text'
-							placeholder='Tu e-mail'
-						/>
-					</div>
-
-					<label htmlFor='message'>Mensaje:</label>
-					<textarea
-						required
-						name='message'
-						id='message'
-						placeholder='Tu mensaje'
-					/>
-
-					<Button alternative='alternative' type='submit'>
-						Enviar
-					</Button>
-				</form> */}
 			</Container>
 		</StyledContact>
 	);

@@ -1,3 +1,7 @@
+import { useContext } from 'react';
+import { LanguageContext } from '../LangContext';
+import strings from './strings/AboutMe';
+
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 
@@ -45,22 +49,17 @@ const StyledAbout = styled.section`
 `;
 
 const AboutMe = () => {
+	const { Lang } = useContext(LanguageContext);
+	const s = strings[Lang];
+
 	return (
 		<StyledAbout className='selection-contrast'>
 			<Container>
 				<Fade>
-					<H2>Sobre mí</H2>
+					<H2>{s.aboutMe}</H2>
 				</Fade>
 				<Fade>
-					<p>
-						Desarrollador freelance, docente de música, amante del
-						Front-end. Realicé un bootcamp de más de 700 hs. de
-						estudio intensivo que me preparó para desempeñarme como
-						desarrollador Fullstack, ideando proyectos reales y
-						complejos, además de potenciar mis habilidades
-						interpersonales y haberme permitido ser mentor de
-						estudiantes principiantes.
-					</p>
+					<p>{s.description}</p>
 				</Fade>
 				<Fade>
 					<ButtonLink
@@ -68,7 +67,7 @@ const AboutMe = () => {
 						alternative='alternative'
 						blank={false}
 					>
-						Ver mis proyectos
+						{s.seeProjects}
 					</ButtonLink>
 				</Fade>
 			</Container>

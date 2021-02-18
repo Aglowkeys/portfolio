@@ -1,3 +1,6 @@
+import React, { useContext } from 'react';
+import { LanguageContext } from '../LangContext';
+
 import styled from 'styled-components';
 import myphoto from '../assets/fotomia.jpg';
 
@@ -21,6 +24,18 @@ const MyPhoto = styled.img`
 	}
 `;
 
-const Me = () => <MyPhoto src={myphoto} alt='Photo of Emiliano' />;
+const Me = () => {
+	const { Lang } = useContext(LanguageContext);
+	return (
+		<MyPhoto
+			src={myphoto}
+			alt={
+				Lang === 'es'
+					? 'Foto de Emiliano Alfonso'
+					: 'Photo of Emiliano Alfonso'
+			}
+		/>
+	);
+};
 
 export default Me;

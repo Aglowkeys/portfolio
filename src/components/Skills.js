@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { LanguageContext } from '../LangContext';
+import strings from './strings/Skills';
+
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 
@@ -26,11 +29,14 @@ const StyledSkills = styled.section`
 `;
 
 const Skills = () => {
+	const { Lang } = useContext(LanguageContext);
+	const s = strings[Lang];
+
 	return (
 		<StyledSkills id='skills'>
 			<Container>
-				<H2>Habilidades</H2>
-				<p>Estas son las tecnologías con las cuales me manejo:</p>
+				<H2>{s.title}</H2>
+				<p>{s.description}</p>
 				<Fade>
 					<SkillCards />
 				</Fade>

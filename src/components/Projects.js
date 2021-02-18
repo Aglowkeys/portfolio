@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { LanguageContext } from '../LangContext';
+import strings from './strings/Projects';
+
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 
@@ -107,41 +110,37 @@ const StyledProjects = styled.section`
 `;
 
 const Projects = () => {
+	const { Lang } = useContext(LanguageContext);
+	const s = strings[Lang];
+
 	return (
 		<StyledProjects id='portfolio'>
 			<Container>
 				<div className='projects__header'>
 					<H2 alternative='alternative'>Portfolio</H2>
-					<p>
-						A continuación te muestro algunos de los proyectos en
-						los cuales trabajé:
-					</p>
+					<p>{s.description}</p>
 				</div>
 				<div className='projects__list'>
 					<div className='project'>
 						<Fade>
 							<div className='project__img-container'>
-								<img src={GamingHub} alt='GamingHub Image' />
+								<img src={GamingHub} alt={s.gamingHubAlt} />
 							</div>
 						</Fade>
 						<h3 className='project__title'>GamingHub</h3>
-						<p className='small project__desc'>
-							E-commerce de venta de videojuegos en formato
-							digital. Hecho con React, Redux, Express,
-							PostgreSQL, Sequelize, Firebase y Passport.
-						</p>
+						<p className='small project__desc'>{s.gamingHub}</p>
 						<div className='project__buttons'>
 							<ButtonLink
 								link='https://ecommerce-ft07-g07.vercel.app'
-								ariaLabel='Visitar el sitio de GamingHub'
+								ariaLabel={s.gamingHubAriaWebsite}
 							>
-								Visitar sitio
+								{s.buttonWebsite}
 							</ButtonLink>
 							<ButtonLink
 								link='https://github.com/Aglowkeys/GamingHub'
-								ariaLabel='Ver el repositorio de GamingHub'
+								ariaLabel={s.gamingHubAriaRepository}
 							>
-								Repositorio
+								{s.buttonRepository}
 							</ButtonLink>
 						</div>
 					</div>
@@ -149,28 +148,23 @@ const Projects = () => {
 					<div className='project'>
 						<Fade>
 							<div className='project__img-container'>
-								<img src={QuizMeApp} alt='QuizMe App Image' />
+								<img src={QuizMeApp} alt={s.quizMeAppAlt} />
 							</div>
 						</Fade>
 						<h3 className='project__title'>QuizMeApp</h3>
-						<p className='small project__desc'>
-							Aplicación móvil de trivias de diversas categorías.
-							Hecho con React Native, MongoDB y GraphQL. El panel
-							de administración fue hecho con Next.js y
-							TypeScript.
-						</p>
+						<p className='small project__desc'>{s.quizMeApp}</p>
 						<div className='project__buttons'>
 							<ButtonLink
 								link='https://appgallery.huawei.com/#/app/C103845919'
-								ariaLabel='Descargar la app QuizMeApp'
+								ariaLabel={s.quizMeAppAriaApp}
 							>
-								Descargar App
+								{s.buttonApp}
 							</ButtonLink>
 							<ButtonLink
 								link='https://github.com/Aglowkeys/QuizmeApp'
-								ariaLabel='Ver el repositorio de QuizMeApp'
+								ariaLabel={s.quizMeAppAriaRepository}
 							>
-								Repositorio
+								{s.buttonRepository}
 							</ButtonLink>
 						</div>
 					</div>
@@ -178,27 +172,23 @@ const Projects = () => {
 					<div className='project'>
 						<Fade>
 							<div className='project__img-container'>
-								<img src={Weather} alt='Weather App Image' />
+								<img src={Weather} alt={s.weatherAppAlt} />
 							</div>
 						</Fade>
 						<h3 className='project__title'>Weather App</h3>
-						<p className='small project__desc'>
-							Aplicación web para buscar los datos climáticos de
-							cualquier parte del mundo. Creada con React. Datos
-							traídos de una API.
-						</p>
+						<p className='small project__desc'>{s.weatherApp} </p>
 						<div className='project__buttons'>
 							<ButtonLink
 								link='https://weather-eosin.vercel.app'
-								ariaLabel='Visitar el sitio de Weather App'
+								ariaLabel={s.weatherAppAriaWebsite}
 							>
-								Visitar sitio
+								{s.buttonWebsite}
 							</ButtonLink>
 							<ButtonLink
 								link='https://github.com/Aglowkeys/Weather'
-								ariaLabel='Ver el repositorio de Weather App'
+								ariaLabel={s.weatherAppAriaRepository}
 							>
-								Repositorio
+								{s.buttonRepository}
 							</ButtonLink>
 						</div>
 					</div>

@@ -1,3 +1,7 @@
+import { useContext } from 'react';
+import { LanguageContext } from '../LangContext';
+import strings from './strings/Navbar';
+
 import styled from 'styled-components';
 import Container from './Container';
 
@@ -104,22 +108,31 @@ const StyledNavbar = styled.nav`
 `;
 
 const Navbar = () => {
+	const { Lang, setLang } = useContext(LanguageContext);
+	const s = strings[Lang];
+	const newLang = Lang === 'es' ? 'en' : 'es';
 	return (
 		<StyledNavbar tabIndex='-1'>
 			<Container>
 				<ul>
 					<li>
-						<a href='#skills'>Habilidades</a>
+						<a href='#skills'>{s.skills}</a>
 					</li>
 					<li>
-						<a href='#portfolio'>Portfolio</a>
+						<a href='#portfolio'>{s.portfolio}</a>
 					</li>
 					<li>
-						<a href='#contact'>Contacto</a>
+						<a href='#contact'>{s.contact}</a>
 					</li>
-					{/* 					<li>
-						<button>ES</button>
-					</li> */}
+					<li>
+						<button
+							aria-label={s.ariaLabel}
+							title={s.ariaLabel}
+							onClick={() => setLang(newLang)}
+						>
+							{s.lang}
+						</button>
+					</li>
 				</ul>
 			</Container>
 		</StyledNavbar>
