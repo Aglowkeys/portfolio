@@ -140,6 +140,7 @@ const MyTextInput = ({ label, ...props }) => {
 			<input
 				{...field}
 				{...props}
+				required='true'
 				aria-required='true'
 				aria-invalid={meta.error ? 'true' : 'false'}
 				aria-describedby={meta.error ? meta.error : null}
@@ -164,6 +165,7 @@ const MyTextarea = ({ label, ...props }) => {
 			<textarea
 				{...field}
 				{...props}
+				required='true'
 				aria-required='true'
 				aria-invalid={meta.error ? 'true' : 'false'}
 				aria-describedby={meta.error ? meta.error : null}
