@@ -128,7 +128,10 @@ const Navbar = () => {
 						<button
 							aria-label={s.ariaLabel}
 							title={s.ariaLabel}
-							onClick={() => setLang(newLang)}
+							onClick={() => {
+								setLang(newLang);
+								localStorage.setItem('siteLanguage', newLang);
+							}}
 						>
 							{s.lang}
 						</button>
