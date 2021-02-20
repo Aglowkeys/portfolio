@@ -133,6 +133,7 @@ const StyledContact = styled.section`
 
 const MyTextInput = ({ label, ...props }) => {
 	const [field, meta] = useField(props);
+	console.log(props);
 
 	return (
 		<div className='input__container'>
@@ -140,9 +141,9 @@ const MyTextInput = ({ label, ...props }) => {
 			<input
 				{...field}
 				{...props}
-				required='true'
-				aria-required='true'
-				aria-invalid={meta.error ? 'true' : 'false'}
+				required={true}
+				aria-required={true}
+				aria-invalid={meta.error ? true : false}
 				aria-describedby={meta.error ? meta.error : null}
 			/>
 			{meta.touched && meta.error ? (
@@ -165,9 +166,9 @@ const MyTextarea = ({ label, ...props }) => {
 			<textarea
 				{...field}
 				{...props}
-				required='true'
-				aria-required='true'
-				aria-invalid={meta.error ? 'true' : 'false'}
+				required={true}
+				aria-required={true}
+				aria-invalid={meta.error ? true : false}
 				aria-describedby={meta.error ? meta.error : null}
 			/>
 			{meta.touched && meta.error ? (
