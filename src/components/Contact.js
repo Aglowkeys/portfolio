@@ -133,7 +133,6 @@ const StyledContact = styled.section`
 
 const MyTextInput = ({ label, ...props }) => {
 	const [field, meta] = useField(props);
-	console.log(props);
 
 	return (
 		<div className='input__container'>
