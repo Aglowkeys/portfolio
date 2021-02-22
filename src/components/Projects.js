@@ -7,7 +7,6 @@ import Fade from 'react-reveal/Fade';
 
 import H2 from './H2';
 import Container from './Container';
-import Button from './Button';
 import ButtonLink from './ButtonLink';
 import GamingHub from '../assets/GamingHub.jpg';
 import QuizMeApp from '../assets/QuizMeApp.jpg';
