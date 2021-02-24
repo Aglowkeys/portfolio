@@ -141,6 +141,7 @@ const MyTextInput = ({ label, ...props }) => {
 				{...field}
 				{...props}
 				required={true}
+				autoComplete='off'
 				aria-required={true}
 				aria-invalid={meta.error ? true : false}
 				aria-describedby={meta.error ? meta.error : null}
