@@ -2,7 +2,7 @@ export default {
 	en: {
 		title: "Let's chat",
 		description:
-			'Do not hesitate to contact me in case you need anything! My social links are below.',
+			'Do not hesitate to use this form to contact me in case you need anything! My social links and email are listed below.',
 		labelName: 'Name (required):',
 		labelEmail: 'E-mail (required):',
 		labelMessage: 'Message (required):',
@@ -26,7 +26,7 @@ export default {
 	es: {
 		title: 'Hablemos',
 		description:
-			'¡No dudes en contactarme por cualquier consulta! Los enlaces a mis redes están abajo.',
+			'¡No dudes en contactarme por cualquier consulta usando este formulario! Los enlaces a mis redes y mi email están abajo.',
 		labelName: 'Nombre (requerido):',
 		labelEmail: 'Correo electrónico (requerido):',
 		labelMessage: 'Mensaje (requerido):',
