@@ -285,7 +285,7 @@ const Contact = () => {
 								{formik.isSubmitting ? s.sending : s.send}
 								{formik.isSubmitting && <Spinner />}
 							</Button>
-							<div className='send__message'>
+							<div className='send__message' aria-live='polite'>
 								{sent && (
 									<>
 										<div className='svg-container'>
