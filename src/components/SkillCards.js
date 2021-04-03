@@ -12,6 +12,7 @@ import {
 	Postgresql,
 	Graphql,
 	Javascript,
+	NextDotJs
 } from '@icons-pack/react-simple-icons';
 
 const StyledCardsContainer = styled.div`
@@ -121,6 +122,12 @@ const SkillCards = () => {
 					<Sass />
 				</div>
 				<p>Sass</p>
+			</div>
+			<div>
+				<div>
+					<NextDotJs />
+				</div>
+				<p>Next.js</p>
 			</div>
 		</StyledCardsContainer>
 	);
