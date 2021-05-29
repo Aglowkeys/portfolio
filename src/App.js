@@ -1,10 +1,9 @@
-import React from 'react';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import ArrowTop from './components/ArrowTop';
 import { LanguageProvider } from './LangContext';
 
-function App() {
+const App = () => {
 	return (
 		<>
 			<LanguageProvider>
@@ -14,6 +13,6 @@ function App() {
 			</LanguageProvider>
 		</>
 	);
-}
+};
 
 export default App;
