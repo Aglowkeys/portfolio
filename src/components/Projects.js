@@ -11,6 +11,7 @@ import ButtonLink from './ButtonLink';
 import GamingHub from '../assets/GamingHub.jpg';
 import QuizMeApp from '../assets/QuizMeApp.jpg';
 import Weather from '../assets/Weather.jpg';
+import Whiteboard from '../assets/Whiteboard.jpg';
 
 const StyledProjects = styled.section`
 	padding: 7em 0 3em;
@@ -186,6 +187,30 @@ const Projects = () => {
 							<ButtonLink
 								link='https://github.com/Aglowkeys/Weather'
 								ariaLabel={s.weatherAppAriaRepository}
+							>
+								{s.buttonRepository}
+							</ButtonLink>
+						</div>
+					</div>
+
+					<div className='project'>
+						<Fade>
+							<div className='project__img-container'>
+								<img src={Whiteboard} alt={s.whiteboardAlt} />
+							</div>
+						</Fade>
+						<h3 className='project__title'>Whiteboard</h3>
+						<p className='small project__desc'>{s.whiteboard} </p>
+						<div className='project__buttons'>
+							<ButtonLink
+								link='https://whiteboard-pi.vercel.app/'
+								ariaLabel={s.whiteboardAriaWebsite}
+							>
+								{s.buttonWebsite}
+							</ButtonLink>
+							<ButtonLink
+								link='https://github.com/Aglowkeys/whiteboard'
+								ariaLabel={s.whiteboardAriaRepository}
 							>
 								{s.buttonRepository}
 							</ButtonLink>
