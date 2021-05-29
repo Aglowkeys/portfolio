@@ -35,7 +35,7 @@ export default {
 			'Aplicación web para buscar los datos climáticos de cualquier parte del mundo. Creada con React. Los datos son traídos de una API.',
 		weatherAppAlt: 'Imagen de Weather App',
 		whiteboard:
-			'Aplicación simple de dibujo hecha para aprender a usar HTML Canvas. Hecha con HTML, CSS y Javascript puro.',
+			'Aplicación simple de dibujo hecha para aprender a usar HTML Canvas. Creada con HTML, CSS y Javascript puro.',
 		whiteboardAlt: 'Imagen de Whiteboard',
 		gamingHubAriaWebsite: 'Visitar el sitio de GamingHub',
 		gamingHubAriaRepository: 'Ver el repositorio de GamingHub',
