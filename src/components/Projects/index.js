@@ -8,7 +8,7 @@ import Container from '../Container';
 import Project from '../Project';
 import GamingHub from '../../assets/GamingHub.jpg';
 import QuizMeApp from '../../assets/QuizMeApp.jpg';
-import Weather from '../../assets/Weather.jpg';
+import Movye from '../../assets/Movye.jpg';
 import Whiteboard from '../../assets/Whiteboard.jpg';
 
 const Projects = () => {
@@ -49,14 +49,14 @@ const Projects = () => {
 					/>
 
 					<Project
-						title='Weather App'
-						desc={s.weatherApp}
-						img={Weather}
-						link1='https://weather-eosin.vercel.app'
-						link1Aria={s.weatherAppAriaWebsite}
+						title='Movye'
+						desc={s.movye}
+						img={Movye}
+						link1='https://movye.vercel.app/'
+						link1Aria={s.movyeAriaWebsite}
 						text1={s.buttonWebsite}
-						link2='https://github.com/Aglowkeys/Weather'
-						link2Aria={s.weatherAppAriaRepository}
+						link2='https://github.com/SantiagoMartinMolina/Movye'
+						link2Aria={s.movyeAriaRepository}
 						text2={s.buttonRepository}
 					/>
 
