@@ -26,49 +26,49 @@ const Projects = () => {
 				<div className='projects__list'>
 					<Project
 						title='GamingHub'
-						desc={s.gamingHub}
+						desc={s.gamingHub.description}
 						img={GamingHub}
 						link1='https://ecommerce-ft07-g07.vercel.app'
-						link1Aria={s.gamingHubAriaWebsite}
+						link1Aria={s.gamingHub.ariaWebsite}
 						text1={s.buttonWebsite}
 						link2='https://github.com/Aglowkeys/GamingHub'
-						link2Aria={s.gamingHubAriaRepository}
+						link2Aria={s.gamingHub.ariaRepository}
 						text2={s.buttonRepository}
 					/>
 
 					<Project
 						title='QuizzMeApp'
-						desc={s.quizMeApp}
+						desc={s.quizMeApp.description}
 						img={QuizMeApp}
 						link1='https://appgallery.huawei.com/#/app/C103845919'
-						link1Aria={s.quizMeAppAriaApp}
+						link1Aria={s.quizMeApp.ariaWebsite}
 						text1={s.buttonApp}
 						link2='https://github.com/Aglowkeys/QuizmeApp'
-						link2Aria={s.quizMeAppAriaRepository}
+						link2Aria={s.quizMeApp.ariaRepository}
 						text2={s.buttonRepository}
 					/>
 
 					<Project
 						title='Movye'
-						desc={s.movye}
+						desc={s.movye.description}
 						img={Movye}
 						link1='https://movye.vercel.app/'
-						link1Aria={s.movyeAriaWebsite}
+						link1Aria={s.movye.ariaWebsite}
 						text1={s.buttonWebsite}
 						link2='https://github.com/SantiagoMartinMolina/Movye'
-						link2Aria={s.movyeAriaRepository}
+						link2Aria={s.movye.ariaRepository}
 						text2={s.buttonRepository}
 					/>
 
 					<Project
 						title='Whiteboard'
-						desc={s.whiteboard}
+						desc={s.whiteboard.description}
 						img={Whiteboard}
 						link1='https://whiteboard-pi.vercel.app/'
-						link1Aria={s.whiteboardAriaWebsite}
+						link1Aria={s.whiteboard.ariaWebsite}
 						text1={s.buttonWebsite}
 						link2='https://github.com/Aglowkeys/whiteboard'
-						link2Aria={s.whiteboardAriaRepository}
+						link2Aria={s.whiteboard.ariaRepository}
 						text2={s.buttonRepository}
 					/>
 				</div>
