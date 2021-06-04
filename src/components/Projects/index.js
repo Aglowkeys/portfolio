@@ -37,7 +37,7 @@ const Projects = () => {
 					/>
 
 					<Project
-						title='QuizzMeApp'
+						title='QuizMeApp'
 						desc={s.quizMeApp.description}
 						img={QuizMeApp}
 						link1='https://appgallery.huawei.com/#/app/C103845919'
