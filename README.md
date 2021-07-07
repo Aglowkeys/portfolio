@@ -16,6 +16,7 @@ Feel free to browse through my repositories. May I suggest you start with <a hre
 
 ### Currently learning:
 - Python
+- Vue.js
 
 ### 📫 Get in touch
 Reach out to me via mail: emilianoalfonso1989@gmail.com \
