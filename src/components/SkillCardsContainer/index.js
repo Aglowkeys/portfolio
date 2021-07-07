@@ -14,6 +14,7 @@ import {
 	Graphql,
 	Javascript,
 	NextDotJs,
+	VueDotJs,
 } from '@icons-pack/react-simple-icons';
 
 const SkillCards = () => {
@@ -31,6 +32,7 @@ const SkillCards = () => {
 			<SkillCard Icon={Tailwindcss} text='Tailwind CSS' />
 			<SkillCard Icon={Sass} text='Sass' />
 			<SkillCard Icon={NextDotJs} text='Next.js' />
+			<SkillCard Icon={VueDotJs} text='Vue.js' />
 		</StyledCardsContainer>
 	);
 };
