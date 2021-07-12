@@ -15,7 +15,7 @@ Feel free to browse through my repositories. May I suggest you start with <a hre
 - PostgreSQL
 
 ### Currently learning:
-- Python
+- TypeScript
 - Vue.js
 
 ### 📫 Get in touch
