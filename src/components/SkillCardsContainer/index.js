@@ -15,6 +15,7 @@ import {
 	Javascript,
 	NextDotJs,
 	VueDotJs,
+	TypeScript
 } from '@icons-pack/react-simple-icons';
 
 const SkillCards = () => {
@@ -23,6 +24,7 @@ const SkillCards = () => {
 			<SkillCard Icon={Html5} text='HTML' />
 			<SkillCard Icon={CssThree} text='CSS' />
 			<SkillCard Icon={Javascript} text='JavaScript' />
+			<SkillCard Icon={TypeScript} text='TypeScript' />
 			<SkillCard Icon={ReactJs} text='React' />
 			<SkillCard Icon={Redux} text='Redux' />
 			<SkillCard Icon={NodeDotJs} text='Node.js' />
