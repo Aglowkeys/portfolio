@@ -8,13 +8,13 @@ import {
     Tailwindcss,
     ReactJs,
     Redux,
-    NodeDotJs,
+    Nodedotjs,
     Express,
     Postgresql,
     Graphql,
     Javascript,
-    NextDotJs,
-    VueDotJs,
+    Nextdotjs,
+    Vuedotjs,
     Typescript,
 } from '@icons-pack/react-simple-icons';
 
@@ -27,14 +27,14 @@ const SkillCards = () => {
             <SkillCard Icon={Typescript} text='TypeScript' />
             <SkillCard Icon={ReactJs} text='React' />
             <SkillCard Icon={Redux} text='Redux' />
-            <SkillCard Icon={NodeDotJs} text='Node.js' />
+            <SkillCard Icon={Nodedotjs} text='Node.js' />
             <SkillCard Icon={Express} text='Express' />
             <SkillCard Icon={Postgresql} text='PostgreSQL' />
             <SkillCard Icon={Graphql} text='GraphQL' />
             <SkillCard Icon={Tailwindcss} text='Tailwind CSS' />
             <SkillCard Icon={Sass} text='Sass' />
-            <SkillCard Icon={NextDotJs} text='Next.js' />
-            <SkillCard Icon={VueDotJs} text='Vue.js' />
+            <SkillCard Icon={Nextdotjs} text='Next.js' />
+            <SkillCard Icon={Vuedotjs} text='Vue.js' />
         </StyledCardsContainer>
     );
 };
