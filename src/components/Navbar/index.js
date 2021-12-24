@@ -5,37 +5,37 @@ import strings from './strings';
 import Container from '../Container';
 
 const Navbar = () => {
-	const { Lang, setLang } = useContext(LanguageContext);
-	const s = strings[Lang];
-	const newLang = Lang === 'es' ? 'en' : 'es';
+    const { Lang, setLang } = useContext(LanguageContext);
+    const s = strings[Lang];
+    const newLang = Lang === 'es' ? 'en' : 'es';
 
-	const toggleLang = () => {
-		setLang(newLang);
-		localStorage.setItem('siteLanguage', newLang);
-	};
+    const toggleLang = () => {
+        setLang(newLang);
+        localStorage.setItem('siteLanguage', newLang);
+    };
 
-	return (
-		<StyledNavbar tabIndex='-1'>
-			<Container>
-				<ul>
-					<li>
-						<a href='#skills'>{s.skills}</a>
-					</li>
-					<li>
-						<a href='#portfolio'>{s.portfolio}</a>
-					</li>
-					<li>
-						<a href='#contact'>{s.contact}</a>
-					</li>
-					<li>
-						<button aria-label={s.ariaLabel} title={s.ariaLabel} onClick={toggleLang}>
-							{s.lang}
-						</button>
-					</li>
-				</ul>
-			</Container>
-		</StyledNavbar>
-	);
+    return (
+        <StyledNavbar tabIndex='-1'>
+            <Container>
+                <ul>
+                    <li>
+                        <a href='#skills'>{s.skills}</a>
+                    </li>
+                    <li>
+                        <a href='#portfolio'>{s.portfolio}</a>
+                    </li>
+                    <li>
+                        <a href='#contact'>{s.contact}</a>
+                    </li>
+                    <li>
+                        <button aria-label={s.ariaLabel} onClick={toggleLang}>
+                            {s.lang}
+                        </button>
+                    </li>
+                </ul>
+            </Container>
+        </StyledNavbar>
+    );
 };
 
 export default Navbar;
