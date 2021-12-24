@@ -9,21 +9,21 @@ import Me from '../Me';
 import ButtonLink from '../ButtonLink';
 
 const Hero = () => {
-	const { Lang } = useContext(LanguageContext);
-	const s = strings[Lang];
+    const { Lang } = useContext(LanguageContext);
+    const s = strings[Lang];
 
-	return (
-		<StyledHero>
-			<div className='hero__info'>
-				<Fade>
-					<Name />
-				</Fade>
-				<p className='hero__tagline'>{s.description}</p>
-				<ButtonLink link={s.cvLink}>{s.downloadCV}</ButtonLink>
-			</div>
-			<Me className='hero__photo' />
-		</StyledHero>
-	);
+    return (
+        <StyledHero id='hero'>
+            <div className='hero__info'>
+                <Fade>
+                    <Name />
+                </Fade>
+                <p className='hero__tagline'>{s.description}</p>
+                <ButtonLink link={s.cvLink}>{s.downloadCV}</ButtonLink>
+            </div>
+            <Me className='hero__photo' />
+        </StyledHero>
+    );
 };
 
 export default Hero;

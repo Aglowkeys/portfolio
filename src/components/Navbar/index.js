@@ -17,6 +17,9 @@ const Navbar = () => {
     return (
         <StyledNavbar tabIndex='-1'>
             <Container>
+                <a href='#hero' className='skip-content-link'>
+                    {s.skipContent}
+                </a>
                 <ul>
                     <li>
                         <a href='#skills'>{s.skills}</a>
