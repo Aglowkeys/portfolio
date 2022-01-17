@@ -14,7 +14,7 @@ export const strings = {
         sendSuccess: 'Message sent! I will get in touch with you as soon as possible.',
         sendError: 'There was an error trying to send your message. Please try again.',
         errorNameIncomplete: 'Please enter your name.',
-        errorNameShort: 'Your name must be at least 3 characters long.',
+        errorNameShort: 'Your name must be at least 2 characters long.',
         errorNameInvalid:
             "The provided name is invalid. It may only contain letters and the following characters: - , . '",
         errorMessage: 'Please enter a message.',
@@ -36,7 +36,7 @@ export const strings = {
         sendSuccess: '¡Tu mensaje fue enviado! Me contactaré contigo a la brevedad.',
         sendError: 'Ocurrió un error al enviar tu mensaje. Por favor, inténtalo nuevamente.',
         errorNameIncomplete: 'Por favor, ingresa tu nombre.',
-        errorNameShort: 'Tu nombre debe tener al menos 3 caracteres de largo.',
+        errorNameShort: 'Tu nombre debe tener al menos 2 caracteres de largo.',
         errorNameInvalid:
             "El nombre ingresado es inválido. Solo se permiten letras y los siguientes símbolos: - , . '",
         errorMessage: 'Por favor, escribe un mensaje.',

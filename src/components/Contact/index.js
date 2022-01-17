@@ -28,7 +28,7 @@ const Contact = () => {
 
     const validationSchema = Yup.object({
         name: Yup.string()
-            .min(3, s.errorNameShort)
+            .min(2, s.errorNameShort)
             .required(s.errorNameIncomplete)
             .matches(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/i, s.errorNameInvalid),
         message: Yup.string().required(s.errorMessage),
