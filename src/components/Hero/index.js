@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { LanguageContext } from '../../LangContext';
 import { StyledHero } from './styles';
-import strings from './strings';
+import { strings } from './strings';
 
 import Fade from 'react-reveal/Fade';
 import Name from '../Name';

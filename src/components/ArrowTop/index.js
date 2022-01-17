@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { ArrowStyled } from './styles';
 import { LanguageContext } from '../../LangContext';
-import strings from './strings';
+import { strings } from './strings';
 
 const ArrowTop = () => {
     const [showScroll, setShowScroll] = useState(false);

@@ -1,7 +1,7 @@
 import { StyledNavbar } from './styles';
 import { useContext } from 'react';
 import { LanguageContext } from '../../LangContext';
-import strings from './strings';
+import { strings } from './strings';
 import Container from '../Container';
 
 const Navbar = () => {

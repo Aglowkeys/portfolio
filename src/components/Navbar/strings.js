@@ -1,4 +1,4 @@
-export default {
+export const strings = {
     en: {
         skills: 'Skills',
         portfolio: 'Portfolio',
