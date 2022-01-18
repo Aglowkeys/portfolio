@@ -30,7 +30,7 @@ const Contact = () => {
         name: Yup.string()
             .min(2, s.errorNameShort)
             .required(s.errorNameIncomplete)
-            .matches(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/i, s.errorNameInvalid),
+            .matches(/^[\w'\-,.]{2,}$/i, s.errorNameInvalid),
         message: Yup.string().required(s.errorMessage),
         email: Yup.string().email(s.errorEmailInvalid).required(s.errorEmailIncomplete),
     });
