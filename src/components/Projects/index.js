@@ -16,10 +16,12 @@ const Projects = () => {
     const s = strings[Lang];
 
     return (
-        <StyledProjects id='portfolio'>
+        <StyledProjects aria-labelledby='projects-title' id='portfolio'>
             <Container>
                 <div className='projects__header'>
-                    <H2 alternative='alternative'>Portfolio</H2>
+                    <H2 id='projects-title' alternative='alternative'>
+                        Portfolio
+                    </H2>
                     <p>{s.description}</p>
                 </div>
 

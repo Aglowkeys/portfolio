@@ -1,6 +1,7 @@
 export const strings = {
     en: {
         title: "Let's chat",
+        sectionLabel: 'Contact me',
         description:
             'Do not hesitate to contact me in case you need anything! My social links and email are listed below.',
         labelName: 'Name (required):',
@@ -23,6 +24,7 @@ export const strings = {
     },
     es: {
         title: 'Hablemos',
+        sectionLabel: 'Contáctame',
         description:
             '¡No dudes en contactarme por cualquier consulta! Los enlaces a mis redes y mi email están abajo.',
         labelName: 'Nombre (requerido):',

@@ -14,9 +14,9 @@ const Skills = () => {
     const s = strings[Lang];
 
     return (
-        <StyledSkills id='skills'>
+        <StyledSkills aria-labelledby='skills-title' id='skills'>
             <Container>
-                <H2>{s.title}</H2>
+                <H2 id='skills-title'>{s.title}</H2>
                 <p>{s.description}</p>
                 <Fade>
                     <SkillCardsContainer />

@@ -58,7 +58,7 @@ const Contact = () => {
     };
 
     return (
-        <StyledContact id='contact'>
+        <StyledContact aria-label={s.sectionLabel} id='contact'>
             <Container>
                 <H2>{s.title}</H2>
                 <p>{s.description}</p>

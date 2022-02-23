@@ -12,10 +12,10 @@ const AboutMe = () => {
     const s = strings[Lang];
 
     return (
-        <StyledAbout className='selection-contrast'>
+        <StyledAbout aria-labelledby='about-title' className='selection-contrast'>
             <Container>
                 <Fade>
-                    <H2>{s.aboutMe}</H2>
+                    <H2 id='about-title'>{s.aboutMe}</H2>
                 </Fade>
                 <Fade>
                     <p>{s.description}</p>
