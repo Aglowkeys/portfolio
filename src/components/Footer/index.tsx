@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
+import type { FunctionComponent } from 'react';
 import { StyledFooter } from './styles';
-import { LanguageContext } from '../../LangContext';
 import { strings } from './strings';
 import Container from '../Container';
 import { Github, Linkedin } from '@icons-pack/react-simple-icons';
+import { useLangContext } from '../../hooks/useLangContext';
 
-const Footer = () => {
-  const { Lang } = useContext(LanguageContext);
-  const s = strings[Lang];
+const Footer: FunctionComponent = () => {
+  const [lang] = useLangContext();
+  const s = strings[lang];
 
   return (
     <StyledFooter>
