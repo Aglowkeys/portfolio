@@ -8,14 +8,11 @@ import QuizMeApp from '../../assets/QuizMeApp.jpg';
 import Movye from '../../assets/Movye.jpg';
 import Whiteboard from '../../assets/Whiteboard.jpg';
 import { useLangContext } from '../../hooks/useLangContext';
-import { PortfolioProjectStrings } from '../../types';
 
 const Projects = () => {
     const [lang] = useLangContext();
-
-    // TODO: tipar todos los strings y quitar estos casteos
-    const s = strings[lang] as Record<string, string>;
-    const { gamingHub, quizMeApp, movye, whiteboard } = s as unknown as Record<string, PortfolioProjectStrings>;
+    const s = strings[lang];
+    const { gamingHub, quizMeApp, movye, whiteboard } = s;
 
     return (
         <StyledProjects aria-labelledby='projects-title' id='portfolio'>
