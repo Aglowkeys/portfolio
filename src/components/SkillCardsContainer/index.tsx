@@ -1,7 +1,7 @@
+import type { FunctionComponent } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { StyledCardsContainer } from './styles';
 import SkillCard from '../SkillCard';
-
 import {
   Html5,
   CssThree,
@@ -19,7 +19,7 @@ import {
   Typescript,
 } from '@icons-pack/react-simple-icons';
 
-const SkillCards = () => {
+const SkillCards: FunctionComponent = () => {
   return (
     <StyledCardsContainer>
       <Fade triggerOnce cascade damping={0.02}>
