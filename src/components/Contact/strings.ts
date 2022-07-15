@@ -1,4 +1,6 @@
-export const strings = {
+import type { String } from "../../types";
+
+export const strings: String = {
     en: {
         title: "Let's chat",
         sectionLabel: 'Contact me',
