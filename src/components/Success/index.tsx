@@ -1,4 +1,6 @@
-const Success = () => (
+import type { FunctionComponent } from "react";
+
+const Success: FunctionComponent = () => (
 	<svg
 		className='w-6 h-6'
 		fill='currentColor'
