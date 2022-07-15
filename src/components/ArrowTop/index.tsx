@@ -1,12 +1,12 @@
-import React, { useState, useContext } from 'react';
+import { useState, type FunctionComponent } from 'react';
 import { ArrowStyled } from './styles';
-import { LanguageContext } from '../../LangContext';
 import { strings } from './strings';
+import { useLangContext } from '../../hooks/useLangContext'
 
-const ArrowTop = () => {
+const ArrowTop: FunctionComponent = () => {
     const [showScroll, setShowScroll] = useState(false);
-    const { Lang } = useContext(LanguageContext);
-    const s = strings[Lang];
+    const [lang] = useLangContext()
+    const s = strings[lang];
 
     const checkScrollTop = () => {
         if (!showScroll && window.pageYOffset > 400) {
@@ -17,8 +17,8 @@ const ArrowTop = () => {
     };
 
     const scrollTop = () => {
-        window.scrollTo({ top: 0, right: 0, behavior: 'smooth' });
-        const nav = document.querySelector('nav');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const nav = document.querySelector('nav')!;
         nav.focus();
     };
 
@@ -27,7 +27,7 @@ const ArrowTop = () => {
     return (
         <ArrowStyled
             onClick={scrollTop}
-            tabIndex='0'
+            tabIndex={0}
             style={{ display: showScroll ? 'flex' : 'none' }}
             aria-label={s.goTop}
         >
