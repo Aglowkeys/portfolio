@@ -1,4 +1,6 @@
-export const strings = {
+import type { String } from "../../types";
+
+export const strings: String = {
     en: {
         aboutMe: 'About Me',
         description:
