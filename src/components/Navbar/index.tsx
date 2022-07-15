@@ -1,13 +1,13 @@
+import type { FunctionComponent } from 'react';
 import { StyledNavbar } from './styles';
-import { useContext } from 'react';
-import { LanguageContext } from '../../LangContext';
 import { strings } from './strings';
 import Container from '../Container';
+import { useLangContext } from '../../hooks/useLangContext';
 
-const Navbar = () => {
-    const { Lang, setLang } = useContext(LanguageContext);
-    const s = strings[Lang];
-    const newLang = Lang === 'es' ? 'en' : 'es';
+const Navbar: FunctionComponent = () => {
+    const [lang, setLang] = useLangContext();
+    const s = strings[lang];
+    const newLang = lang === 'es' ? 'en' : 'es';
 
     const toggleLang = () => {
         setLang(newLang);
@@ -15,7 +15,7 @@ const Navbar = () => {
     };
 
     return (
-        <StyledNavbar tabIndex='-1'>
+        <StyledNavbar tabIndex={-1}>
             <Container>
                 <a href='#hero' className='skip-content-link'>
                     {s.skipContent}
