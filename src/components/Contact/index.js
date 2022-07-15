@@ -1,12 +1,10 @@
-import React, { useRef, useState, useContext } from 'react';
-import { StyledContact } from './styles';
-import { LanguageContext } from '../../LangContext';
-import { strings } from './strings';
-
+import React, { useRef, useState } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import emailjs, { init } from '@emailjs/browser';
-
+import { StyledContact } from './styles';
+import { strings } from './strings';
+import { useLangContext } from '../../hooks/useLangContext';
 import Input from './Form/Input';
 import Textarea from './Form/Textarea';
 import H2 from '../H2';
@@ -20,8 +18,8 @@ const Contact = () => {
   const { REACT_APP_SERVICE, REACT_APP_TEMPLATE, REACT_APP_USER } = process.env;
   init(REACT_APP_USER);
 
-  const { Lang } = useContext(LanguageContext);
-  const s = strings[Lang];
+  const [lang] = useLangContext();
+  const s = strings[lang];
   const formRef = useRef(null);
   const [sent, setSent] = useState(false);
   const [sendError, setSendError] = useState(false);
@@ -97,7 +95,7 @@ const Contact = () => {
               />
 
               <Button
-                alternative='alternative'
+                className='alternative'
                 type='submit'
                 disabled={formik.isSubmitting}
               >
