@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
+import type { FunctionComponent } from 'react';
 import { StyledSkills } from './styles';
-import { LanguageContext } from '../../LangContext';
 import { strings } from './strings';
+import { useLangContext } from '../../hooks/useLangContext';
 import Container from '../Container';
 import H2 from '../H2';
 import SkillCardsContainer from '../SkillCardsContainer';
 
-const Skills = () => {
-  const { Lang } = useContext(LanguageContext);
-  const s = strings[Lang];
+const Skills: FunctionComponent = () => {
+  const [lang] = useLangContext();
+  const s = strings[lang];
 
   return (
     <StyledSkills aria-labelledby='skills-title' id='skills'>
