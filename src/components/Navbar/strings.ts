@@ -1,6 +1,6 @@
-import type { String } from "../../types";
+import { NavbarStrings } from "../../types/strings";
 
-export const strings: String = {
+export const strings: NavbarStrings = {
     en: {
         skills: 'Skills',
         portfolio: 'Portfolio',

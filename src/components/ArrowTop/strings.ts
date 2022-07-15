@@ -1,6 +1,6 @@
-import { String } from "../../types";
+import { ArrowTopStrings } from "../../types/strings";
 
-export const strings: String = {
+export const strings: ArrowTopStrings = {
     en: {
         goTop: 'Scroll back to top',
     },

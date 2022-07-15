@@ -1,6 +1,6 @@
-import type { String } from "../../types";
+import { FooterStrings } from "../../types/strings";
 
-export const strings: String = {
+export const strings: FooterStrings = {
     en: {
         github: 'See my Github profile',
         linkedin: 'See my LinkedIn profile',

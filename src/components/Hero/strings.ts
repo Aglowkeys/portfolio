@@ -1,6 +1,6 @@
-import type { String } from "../../types";
+import { HeroStrings } from "../../types/strings";
 
-export const strings: String = {
+export const strings: HeroStrings = {
     en: {
         description:
             'I am a web developer who focuses on the small details, and on simple, accessible and adaptable designs.',
