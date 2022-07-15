@@ -1,4 +1,6 @@
-export const strings = {
+import type { String } from "../../types";
+
+export const strings: String = {
     en: {
         description:
             'I am a web developer who focuses on the small details, and on simple, accessible and adaptable designs.',

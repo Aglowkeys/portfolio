@@ -1,15 +1,15 @@
-import React, { useContext } from 'react';
+import type { FunctionComponent } from 'react';
 import { Fade, Slide } from 'react-awesome-reveal';
-import { LanguageContext } from '../../LangContext';
 import { StyledHero } from './styles';
 import { strings } from './strings';
 import Name from '../Name';
 import Me from '../Me';
 import ButtonLink from '../ButtonLink';
+import { useLangContext } from '../../hooks/useLangContext';
 
-const Hero = () => {
-  const { Lang } = useContext(LanguageContext);
-  const s = strings[Lang];
+const Hero: FunctionComponent = () => {
+  const [lang] = useLangContext();
+  const s = strings[lang];
 
   return (
     <StyledHero id='hero'>
@@ -22,12 +22,12 @@ const Hero = () => {
         <Slide triggerOnce direction='down' duration={500} delay={200}>
           <Fade triggerOnce delay={450} cascade damping={0.2}>
             <p className='hero__tagline'>{s.description}</p>
-            <ButtonLink link={s.cvLink}>{s.downloadCV}</ButtonLink>
+            <ButtonLink href={s.cvLink}>{s.downloadCV}</ButtonLink>
           </Fade>
         </Slide>
       </div>
       <Fade triggerOnce delay={150}>
-        <Me className='hero__photo' />
+        <Me />
       </Fade>
     </StyledHero>
   );
