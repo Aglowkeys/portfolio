@@ -1,4 +1,6 @@
-export const strings = {
+import { Language, PortfolioProjectStrings } from "../../types";
+
+export const strings: Record<Language, Record<string, string | PortfolioProjectStrings>> = {
     en: {
         description: 'Here you can see some of the projects I have worked on:',
         buttonRepository: 'See Repository',
