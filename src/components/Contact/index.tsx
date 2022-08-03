@@ -26,7 +26,6 @@ const Contact: FunctionComponent = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('submitting');
-    formRef.current!.reset();
 
     emailjs
       .sendForm(REACT_APP_SERVICE!, REACT_APP_TEMPLATE!, formRef.current!)
