@@ -1,6 +1,8 @@
 import { ContactStrings } from "../../types/strings";
 
 export const strings: ContactStrings = {
+  // TODO: Tipar estas props para que las keys con "Email" / "Name" usen el tipo ValidIds declarado en Input.tsx
+  // Cambiar la estructura del objeto a algo como en.labels.name, es.errors.name.incomplete
     en: {
         title: "Let's chat",
         sectionLabel: 'Contact me',

@@ -73,7 +73,6 @@ export const StyledContact = styled.section`
 	}
 
 	.input__error {
-		background-color: var(--error);
 		font-size: var(--body-xs);
 		font-weight: 600;
 		text-transform: uppercase;
@@ -82,7 +81,12 @@ export const StyledContact = styled.section`
 		align-items: flex-start;
 		line-height: 1.5;
 
-		.error__svg-container {
+    p {
+      font: inherit;
+      margin: 0;
+    }
+
+		svg {
 			flex-shrink: 0;
 			width: 1.7em;
 			height: 1.7em;
