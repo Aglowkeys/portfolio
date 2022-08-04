@@ -22,7 +22,7 @@ import {
 const SkillCards: FunctionComponent = () => {
   return (
     <StyledCardsContainer>
-      <Fade triggerOnce cascade damping={0.02}>
+      <Fade triggerOnce cascade damping={0.04}>
         <SkillCard Icon={Html5} text='HTML' />
         <SkillCard Icon={CssThree} text='CSS' />
         <SkillCard Icon={Javascript} text='JavaScript' />
