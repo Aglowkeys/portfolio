@@ -41,6 +41,7 @@ const Textarea: FunctionComponent = () => {
           <label htmlFor='Message'>{labelMessage}</label>
             <textarea
               id='Message'
+              name='Message'
               placeholder={placeholderMessage}
               onBlur={handleBlur}
               onChange={handleChange}

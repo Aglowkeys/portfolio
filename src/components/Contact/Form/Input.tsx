@@ -55,6 +55,7 @@ const Input: FunctionComponent<Props> = ({ id, type = 'text' }) => {
           <input
               id={id}
               type={type}
+              name={id}
               placeholder={s[`placeholder${id}`]}
               onBlur={handleBlur}
               onChange={handleChange}
