@@ -1,4 +1,9 @@
-import { useRef, useState, type FormEvent, type FunctionComponent } from 'react';
+import {
+  useRef,
+  useState,
+  type FormEvent,
+  type FunctionComponent,
+} from 'react';
 import emailjs, { init } from '@emailjs/browser';
 import { StyledContact } from './styles';
 import { strings } from './strings';
@@ -21,7 +26,7 @@ const Contact: FunctionComponent = () => {
   const [lang] = useLangContext();
   const s = strings[lang];
   const formRef = useRef<HTMLFormElement>(null);
-  const [status, setStatus] = useState<Status>('idle')
+  const [status, setStatus] = useState<Status>('idle');
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -37,30 +42,30 @@ const Contact: FunctionComponent = () => {
   };
 
   return (
-    <StyledContact aria-label={s.sectionLabel} id='contact'>
+    <StyledContact aria-label={s.sectionLabel} id="contact">
       <Container>
         <H2>{s.title}</H2>
         <p>{s.description}</p>
         <form ref={formRef} onSubmit={handleSubmit}>
           <div>
-            <Input id='Name' />
-            <Input id='Email' type='email' />
+            <Input id="Name" />
+            <Input id="Email" type="email" />
           </div>
           <Textarea />
 
           <Button
-            className='alternative'
-            type='submit'
+            className="alternative"
+            type="submit"
             disabled={status === 'submitting'}
           >
             {status === 'submitting' ? s.sending : s.send}
             {status === 'submitting' ? <Spinner /> : null}
           </Button>
 
-          <div className='send__message' aria-live='polite'>
+          <div className="send__message" aria-live="polite">
             {status === 'success' && (
               <>
-                <div className='svg-container'>
+                <div className="svg-container">
                   <Success />
                 </div>
                 {s.sendSuccess}
@@ -68,7 +73,7 @@ const Contact: FunctionComponent = () => {
             )}
             {status === 'error' && (
               <>
-                <div className='svg-container'>
+                <div className="svg-container">
                   <Exclamation />
                 </div>
                 {s.sendError}

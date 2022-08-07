@@ -13,18 +13,18 @@ const Textarea: FunctionComponent = () => {
 
   const validateTextarea = (value: string) => {
     if (!value.length) {
-      setError(errorMessage)
+      setError(errorMessage);
       return;
     }
 
-    setError('')
+    setError('');
   };
 
   const handleBlur = (e: FocusEvent<HTMLTextAreaElement>) => {
     if (!touched) {
       setTouched(true);
     }
-  
+
     validateTextarea(e.target.value);
   };
 
@@ -34,32 +34,32 @@ const Textarea: FunctionComponent = () => {
     }
 
     validateTextarea(e.target.value);
-  }
+  };
 
-    return (
-        <div className='textarea__container'>
-          <label htmlFor='Message'>{labelMessage}</label>
-            <textarea
-              id='Message'
-              name='Message'
-              placeholder={placeholderMessage}
-              onBlur={handleBlur}
-              onChange={handleChange}
-              required
-              aria-required
-              autoComplete='off'
-              aria-invalid={isInvalid}
-              aria-describedby={isInvalid ? 'error-message' : undefined}
-            />
+  return (
+    <div className="textarea__container">
+      <label htmlFor="Message">{labelMessage}</label>
+      <textarea
+        id="Message"
+        name="Message"
+        placeholder={placeholderMessage}
+        onBlur={handleBlur}
+        onChange={handleChange}
+        required
+        aria-required
+        autoComplete="off"
+        aria-invalid={isInvalid}
+        aria-describedby={isInvalid ? 'error-message' : undefined}
+      />
 
-          {isInvalid && (
-            <div className='input__error' id={'error-message'}>
-                <Exclamation />
-                <p>{error}</p>
-            </div>
-          )}
+      {isInvalid && (
+        <div className="input__error" id="error-message">
+          <Exclamation />
+          <p>{error}</p>
         </div>
-    );
+      )}
+    </div>
+  );
 };
 
 export default Textarea;

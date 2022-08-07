@@ -10,16 +10,14 @@ type Props = {
   disabled?: boolean;
 }
 
-const ButtonLink: FunctionComponent<Props> = ({ children, ariaLabel, ...rest }) => {
-	return (
-		<StyledLink
-			rel='noopener noreferrer'
-			aria-label={ariaLabel}
-      {...rest}
-		>
-			{children}
-		</StyledLink>
-	);
-};
+const ButtonLink: FunctionComponent<Props> = ({ children, ariaLabel, ...rest }) => (
+  <StyledLink
+    rel="noopener noreferrer"
+    aria-label={ariaLabel}
+    {...rest}
+  >
+    {children}
+  </StyledLink>
+);
 
 export default ButtonLink;

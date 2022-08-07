@@ -12,16 +12,16 @@ const Hero: FunctionComponent = () => {
   const s = strings[lang];
 
   return (
-    <StyledHero id='hero'>
-      <div className='hero__info'>
-        <Slide triggerOnce direction='down' duration={500}>
+    <StyledHero id="hero">
+      <div className="hero__info">
+        <Slide triggerOnce direction="down" duration={500}>
           <Fade triggerOnce delay={300}>
             <Name />
           </Fade>
         </Slide>
-        <Slide triggerOnce direction='down' duration={500} delay={200}>
+        <Slide triggerOnce direction="down" duration={500} delay={200}>
           <Fade triggerOnce delay={450} cascade damping={0.2}>
-            <p className='hero__tagline'>{s.description}</p>
+            <p className="hero__tagline">{s.description}</p>
             <ButtonLink href={s.cvLink}>{s.downloadCV}</ButtonLink>
           </Fade>
         </Slide>

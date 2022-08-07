@@ -5,8 +5,8 @@ import myphoto from '../../assets/fotomia.jpg';
 const Me: FunctionComponent = () => (
   <StyledPhoto
     src={myphoto}
-    alt='Emiliano Alfonso'
-    aria-hidden='true'
+    alt="Emiliano Alfonso"
+    aria-hidden="true"
   />
 );
 

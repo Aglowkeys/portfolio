@@ -7,15 +7,13 @@ type Props = {
   Icon: typeof ReactJs; // Se hizo lo que se pudo 🤷‍♂️ TODO: Ver cómo mejorar esto
 };
 
-const SkillCard: FunctionComponent<Props> = ({ text, Icon }) => {
-	return (
-		<StyledSkillCard>
-			<div>
-				<Icon />
-			</div>
-			<p>{text}</p>
-		</StyledSkillCard>
-	);
-};
+const SkillCard: FunctionComponent<Props> = ({ text, Icon }) => (
+  <StyledSkillCard>
+    <div>
+      <Icon />
+    </div>
+    <p>{text}</p>
+  </StyledSkillCard>
+);
 
 export default SkillCard;

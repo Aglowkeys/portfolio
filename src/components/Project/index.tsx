@@ -1,6 +1,6 @@
 import type { FunctionComponent } from 'react';
-import { StyledProject } from './styles';
 import { Fade } from 'react-awesome-reveal';
+import { StyledProject } from './styles';
 import ButtonLink from '../ButtonLink';
 
 type Props = {
@@ -28,15 +28,15 @@ const Project: FunctionComponent<Props> = ({
 }) => (
   <StyledProject>
     <Fade triggerOnce>
-      <div className='project__img-container'>
+      <div className="project__img-container">
         <img src={imageSrc} alt={title} />
       </div>
     </Fade>
 
-    <h3 className='project__title'>{title}</h3>
-    <p className='small project__desc'>{desc}</p>
+    <h3 className="project__title">{title}</h3>
+    <p className="small project__desc">{desc}</p>
 
-    <div className='project__buttons'>
+    <div className="project__buttons">
       <ButtonLink href={websiteLink} ariaLabel={websiteLinkLabel}>
         {websiteLinkText}
       </ButtonLink>

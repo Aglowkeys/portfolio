@@ -3,13 +3,11 @@ import { StyledHeader } from './styles';
 import Hero from '../Hero';
 import Navbar from '../Navbar';
 
-const Header: FunctionComponent = () => {
-	return (
-		<StyledHeader>
-			<Navbar />
-			<Hero />
-		</StyledHeader>
-	);
-};
+const Header: FunctionComponent = () => (
+  <StyledHeader>
+    <Navbar />
+    <Hero />
+  </StyledHeader>
+);
 
 export default Header;

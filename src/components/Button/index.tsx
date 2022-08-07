@@ -6,14 +6,12 @@ type Props = {
   type?: 'button' | 'submit' | 'reset';
   className?: string;
   disabled?: boolean;
-}
-
-const Button: FunctionComponent<Props> = ({ children, disabled = false, ...rest }) => {
-	return (
-		<StyledButton disabled={disabled} {...rest}>
-			{children}
-		</StyledButton>
-	);
 };
+
+const Button: FunctionComponent<Props> = ({ children, disabled = false, ...rest }) => (
+  <StyledButton disabled={disabled} {...rest}>
+    {children}
+  </StyledButton>
+);
 
 export default Button;

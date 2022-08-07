@@ -11,9 +11,9 @@ const Skills: FunctionComponent = () => {
   const s = strings[lang];
 
   return (
-    <StyledSkills aria-labelledby='skills-title' id='skills'>
+    <StyledSkills aria-labelledby="skills-title" id="skills">
       <Container>
-        <H2 id='skills-title'>{s.title}</H2>
+        <H2 id="skills-title">{s.title}</H2>
         <p>{s.description}</p>
         <SkillCardsContainer />
       </Container>
