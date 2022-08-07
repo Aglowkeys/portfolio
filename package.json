@@ -36,7 +36,7 @@
     "rules": {
       "import/extensions": "off",
       "import/prefer-default-export": "off",
-      "linebreak-style": ["error", "windows"],
+      "linebreak-style": 0,
       "max-len": ["error", {
         "code": 120,
         "ignoreStrings": true
