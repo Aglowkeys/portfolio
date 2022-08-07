@@ -33,8 +33,7 @@ export type ContactStrings = Record<Language, {
 }>;
 
 export type FooterStrings = Record<Language, {
-  github: string;
-  linkedin: string;
+  social: string;
 }>;
 
 export type HeroStrings = Record<Language, {
