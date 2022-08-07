@@ -45,12 +45,19 @@ body {
 	--h-lg: 8rem;
 }
 
+@media (max-width: 1000px) {
+  body {
+    --h-lg: 4rem;
+  }
+}
+
 @media (max-width: 550px) {
 	body {
 		--body-sm: 1rem;
 		--body-md: 1.1rem;
 		--h-sm: 1.7rem;
 		--h-md: 2rem;
+    --h-lg: 3rem;
 	}
 }
 

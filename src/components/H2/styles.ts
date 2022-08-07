@@ -5,6 +5,7 @@ export const StyledH2 = styled.h2`
   font-size: var(--h-md);
   letter-spacing: -0.03em;
   line-height: 1;
+  transition: font-size 200ms;
 
   &::after {
     content: '';

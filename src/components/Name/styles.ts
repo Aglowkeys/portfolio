@@ -6,10 +6,7 @@ export const StyledName = styled.h1`
   line-height: 1;
   letter-spacing: -0.075em;
   max-width: 8ch;
-
-  @media (max-width: 1000px) {
-    font-size: var(--h-md);
-  }
+  transition: font-size 200ms;
 
   @supports (background-clip: text) or (-webkit-background-clip: text) {
     color: transparent;
