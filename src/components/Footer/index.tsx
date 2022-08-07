@@ -13,13 +13,18 @@ const Footer: FunctionComponent = () => {
     <StyledFooter>
       <Container>
         <div className="footer__icons">
-          <ul>
+          {/*
+            * The next line is needed in order to restore the semantic meaning of list to the <ul>.
+            * Since "list-style: none" was applied via CSS, Apple's VoiceOver does not announce it as a list anymore.
+          */}
+          {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
+          <ul role="list" aria-label={s.social}>
             <li>
               <a
                 href="https://github.com/Aglowkeys/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={s.github}
+                aria-label="Github"
               >
                 <Github size={35} />
               </a>
@@ -29,7 +34,7 @@ const Footer: FunctionComponent = () => {
                 href="https://www.linkedin.com/in/emiliano-alfonso/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={s.linkedin}
+                aria-label="LinkedIn"
               >
                 <Linkedin size={35} />
               </a>

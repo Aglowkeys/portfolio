@@ -14,13 +14,20 @@ const Navbar: FunctionComponent = () => {
     localStorage.setItem('siteLanguage', newLang);
   };
 
+  // TODO: El botón de cambiar idioma debería formar parte de la <nav> o el <ul>?
+  // Ver si se puede mejorar la semántica. Usar <abbr> si hace falta.
   return (
     <StyledNavbar tabIndex={-1}>
       <Container>
         <a href="#hero" className="skip-content-link">
           {s.skipContent}
         </a>
-        <ul>
+        {/*
+          * The next line is needed in order to restore the semantic meaning of list to the <ul>.
+          * Since "list-style: none" was applied via CSS, Apple's VoiceOver does not announce it as a list anymore.
+        */}
+        {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
+        <ul role="list">
           <li>
             <a href="#skills">{s.skills}</a>
           </li>
