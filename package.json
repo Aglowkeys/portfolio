@@ -48,7 +48,9 @@
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint"],
+    "plugins": [
+      "@typescript-eslint"
+    ],
     "extends": [
       "airbnb",
       "airbnb/hooks",
@@ -60,7 +62,12 @@
     "settings": {
       "import/resolver": {
         "node": {
-          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ]
         }
       }
     },
@@ -69,18 +76,49 @@
       "import/extensions": "off",
       "import/prefer-default-export": "off",
       "linebreak-style": "off",
-      "max-len": ["error", {
-        "code": 120,
-        "ignoreStrings": true
-      }],
-      "object-curly-newline": ["error", {
-        "ObjectExpression": { "multiline": true, "minProperties": 3 },
-        "ObjectPattern": { "multiline": true, "minProperties": 4 },
-        "ImportDeclaration": { "multiline": true, "minProperties": 4 },
-        "ExportDeclaration": { "multiline": true, "minProperties": 4 }
-      }],
-      "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }],
-      "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
+      "max-len": [
+        "error",
+        {
+          "code": 120,
+          "ignoreStrings": true
+        }
+      ],
+      "object-curly-newline": [
+        "error",
+        {
+          "ObjectExpression": {
+            "multiline": true,
+            "minProperties": 3
+          },
+          "ObjectPattern": {
+            "multiline": true,
+            "minProperties": 4
+          },
+          "ImportDeclaration": {
+            "multiline": true,
+            "minProperties": 4
+          },
+          "ExportDeclaration": {
+            "multiline": true,
+            "minProperties": 4
+          }
+        }
+      ],
+      "react/function-component-definition": [
+        "error",
+        {
+          "namedComponents": "arrow-function"
+        }
+      ],
+      "react/jsx-filename-extension": [
+        "error",
+        {
+          "extensions": [
+            ".jsx",
+            ".tsx"
+          ]
+        }
+      ],
       "react/jsx-no-constructed-context-values": "off",
       "react/jsx-props-no-spreading": "off",
       "react/react-in-jsx-scope": "off",
