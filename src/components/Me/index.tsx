@@ -7,6 +7,7 @@ const Me: FunctionComponent = () => (
     src={myphoto}
     alt="Emiliano Alfonso"
     aria-hidden="true"
+    loading="lazy"
   />
 );
 

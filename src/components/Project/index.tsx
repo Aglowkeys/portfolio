@@ -29,7 +29,7 @@ const Project: FunctionComponent<Props> = ({
   <StyledProject>
     <Fade triggerOnce>
       <div className="project__img-container">
-        <img src={imageSrc} alt={title} />
+        <img src={imageSrc} alt={title} loading="lazy" />
       </div>
     </Fade>
 
