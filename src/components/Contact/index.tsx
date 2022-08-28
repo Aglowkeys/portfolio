@@ -14,8 +14,8 @@ import Button from '../Button';
 import Exclamation from '../Exclamation';
 import Success from '../Success';
 import Spinner from '../Spinner';
-import Input from './Form/Input';
-import Textarea from './Form/Textarea';
+import Input from './components/Input';
+import Textarea from './components/Textarea';
 
 export type Status = 'idle' | 'submitting' | 'error' | 'success';
 
