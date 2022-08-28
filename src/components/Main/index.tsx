@@ -3,7 +3,7 @@ import AboutMe from '../AboutMe';
 import Header from '../Header';
 import Projects from '../Projects';
 import Skills from '../Skills';
-import Contact from '../Contact';
+import Contact from '../ContactForm';
 
 const Main: FunctionComponent = () => (
   <main>
