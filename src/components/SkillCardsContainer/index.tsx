@@ -4,16 +4,13 @@ import {
   Html5,
   CssThree,
   Sass,
-  Tailwindcss,
   ReactJs,
   Redux,
   Nodedotjs,
   Express,
   Postgresql,
-  Graphql,
   Javascript,
   Nextdotjs,
-  Vuedotjs,
   Typescript,
 } from '@icons-pack/react-simple-icons';
 import { StyledCardsContainer } from './styles';
@@ -31,11 +28,8 @@ const SkillCards: FunctionComponent = () => (
       <SkillCard Icon={Nodedotjs} text="Node.js" />
       <SkillCard Icon={Express} text="Express" />
       <SkillCard Icon={Postgresql} text="PostgreSQL" />
-      <SkillCard Icon={Graphql} text="GraphQL" />
-      <SkillCard Icon={Tailwindcss} text="Tailwind CSS" />
       <SkillCard Icon={Sass} text="Sass" />
       <SkillCard Icon={Nextdotjs} text="Next.js" />
-      <SkillCard Icon={Vuedotjs} text="Vue.js" />
     </Fade>
   </StyledCardsContainer>
 );
