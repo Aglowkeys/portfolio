@@ -15,7 +15,6 @@ Feel free to browse through my repositories. May I suggest you start with [Gamin
 ![Express](https://img.shields.io/badge/-Express-FAFAFA?style=for-the-badge&logo=express&logoColor=333)
 ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-0064a5?style=for-the-badge&logo=postgresql&logoColor=FAFAFA)
 ![Sass](https://img.shields.io/badge/-Sass-CC6699?style=for-the-badge&logo=sass&logoColor=FAFAFA)
-![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=FAFAFA)
 ![Next.js](https://img.shields.io/badge/-Next.js-FAFAFA?style=for-the-badge&logo=next.js&logoColor=333)
 
 ## 📫 Get in touch
